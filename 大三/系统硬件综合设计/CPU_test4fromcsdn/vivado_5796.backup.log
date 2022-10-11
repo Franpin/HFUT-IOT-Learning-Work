@@ -1,0 +1,40 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Sun Dec 26 19:33:50 2021
+# Process ID: 5796
+# Current directory: D:/桌面/CPU_test4fromcsdn
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent9832 D:\桌面\CPU_test4fromcsdn\CPU_test4fromcsdn.xpr
+# Log file: D:/桌面/CPU_test4fromcsdn/vivado.log
+# Journal file: D:/桌面/CPU_test4fromcsdn\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/桌面/CPU_test4fromcsdn/CPU_test4fromcsdn.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Vivado/Vivado/2020.1/data/ip'.
+open_project: Time (s): cpu = 00:00:23 ; elapsed = 00:00:10 . Memory (MB): peak = 1055.055 ; gain = 0.000
+update_compile_order -fileset sources_1
+close_project
+create_project project_1 D:/Vivado2019/project_1 -part xc7vx485tffg1157-1
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Vivado/Vivado/2020.1/data/ip'.
+create_project: Time (s): cpu = 00:00:12 ; elapsed = 00:00:06 . Memory (MB): peak = 1057.617 ; gain = 0.000
+file mkdir D:/Vivado2019/project_1/project_1.srcs/sources_1/new
+close [ open D:/Vivado2019/project_1/project_1.srcs/sources_1/new/hello.v w ]
+add_files D:/Vivado2019/project_1/project_1.srcs/sources_1/new/hello.v
+update_compile_order -fileset sources_1
+close_project
+open_project D:/桌面/CPU_test4fromcsdn/CPU_test4fromcsdn.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Vivado/Vivado/2020.1/data/ip'.
+update_compile_order -fileset sources_1
+exit
+INFO: [Common 17-206] Exiting Vivado at Sun Dec 26 19:50:44 2021...

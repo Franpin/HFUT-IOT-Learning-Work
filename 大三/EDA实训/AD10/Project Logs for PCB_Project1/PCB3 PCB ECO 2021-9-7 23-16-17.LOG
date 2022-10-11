@@ -1,0 +1,23 @@
+Added Pin To Net: NetName=GND Pin=C4-1
+Added Pin To Net: NetName=VCC Pin=U1-4
+Added Pin To Net: NetName=VEE Pin=U1-11
+Added Pin To Net: NetName=VEE Pin=U2-4
+Added Pin To Net: NetName=VCC Pin=U2-7
+Added Member To Class: ClassName=sheet2 Member=Component C1 Cap
+Added Member To Class: ClassName=sheet2 Member=Component C2 Cap
+Added Member To Class: ClassName=sheet2 Member=Component C3 Cap
+Added Member To Class: ClassName=sheet2 Member=Component C4 Cap
+Added Member To Class: ClassName=sheet2 Member=Component C5 Cap Pol1
+Added Member To Class: ClassName=sheet2 Member=Component C6 Cap Pol1
+Added Member To Class: ClassName=sheet2 Member=Component C7 Cap Pol1
+Added Member To Class: ClassName=sheet2 Member=Component R1 Res2
+Added Member To Class: ClassName=sheet2 Member=Component R2 Res2
+Added Member To Class: ClassName=sheet2 Member=Component R3 Res2
+Added Member To Class: ClassName=sheet2 Member=Component R4 Res2
+Added Member To Class: ClassName=sheet2 Member=Component R5 Res2
+Added Member To Class: ClassName=sheet2 Member=Component R6 Res2
+Added Member To Class: ClassName=sheet2 Member=Component R7 Res2
+Added Member To Class: ClassName=sheet2 Member=Component R8 Res2
+Added Member To Class: ClassName=sheet2 Member=Component U1 LM124AJ
+Added Member To Class: ClassName=sheet2 Member=Component U2 LM741CN
+Added Member To Class: ClassName=sheet2 Member=Component U3 Component_1

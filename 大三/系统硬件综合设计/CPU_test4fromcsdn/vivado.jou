@@ -1,0 +1,15 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Sun Dec 26 20:01:26 2021
+# Process ID: 1368
+# Current directory: D:/桌面/CPU_test4fromcsdn
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent17380 D:\桌面\CPU_test4fromcsdn\CPU_test4fromcsdn.xpr
+# Log file: D:/桌面/CPU_test4fromcsdn/vivado.log
+# Journal file: D:/桌面/CPU_test4fromcsdn\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/桌面/CPU_test4fromcsdn/CPU_test4fromcsdn.xpr
+
+launch_simulation

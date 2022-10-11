@@ -1,0 +1,32 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../CPU_test4fromcsdn.srcs/sources_1/new/ADR.v" \
+"../../../../CPU_test4fromcsdn.srcs/sources_1/new/ALU.v" \
+"../../../../CPU_test4fromcsdn.srcs/sources_1/new/ALUoutDR.v" \
+"../../../../CPU_test4fromcsdn.srcs/sources_1/new/BDR.v" \
+"../../../../CPU_test4fromcsdn.srcs/sources_1/new/ControlUnit.v" \
+"../../../../CPU_test4fromcsdn.srcs/sources_1/new/DBDR.v" \
+"../../../../CPU_test4fromcsdn.srcs/sources_1/new/DFileFlop.v" \
+"../../../../CPU_test4fromcsdn.srcs/sources_1/new/DataMEM.v" \
+"../../../../CPU_test4fromcsdn.srcs/sources_1/new/DataSelector_2to1.v" \
+"../../../../CPU_test4fromcsdn.srcs/sources_1/new/DataSelector_2to1_sa.v" \
+"../../../../CPU_test4fromcsdn.srcs/sources_1/new/DataSelector_3to1.v" \
+"../../../../CPU_test4fromcsdn.srcs/sources_1/new/DataSelector_4to1.v" \
+"../../../../CPU_test4fromcsdn.srcs/sources_1/new/IR.v" \
+"../../../../CPU_test4fromcsdn.srcs/sources_1/new/InstructionMEM.v" \
+"../../../../CPU_test4fromcsdn.srcs/sources_1/new/Main.v" \
+"../../../../CPU_test4fromcsdn.srcs/sources_1/new/NextState.v" \
+"../../../../CPU_test4fromcsdn.srcs/sources_1/new/OutputFunc.v" \
+"../../../../CPU_test4fromcsdn.srcs/sources_1/new/PC.v" \
+"../../../../CPU_test4fromcsdn.srcs/sources_1/new/PCAddFour.v" \
+"../../../../CPU_test4fromcsdn.srcs/sources_1/new/PCAddImm.v" \
+"../../../../CPU_test4fromcsdn.srcs/sources_1/new/PCJump.v" \
+"../../../../CPU_test4fromcsdn.srcs/sources_1/new/RegFile.v" \
+"../../../../CPU_test4fromcsdn.srcs/sources_1/new/SignExtend.v" \
+"../../../../CPU_test4fromcsdn.srcs/sim_1/new/cpu_sim.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

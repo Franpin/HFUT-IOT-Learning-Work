@@ -1,0 +1,8 @@
+Added Component: Designator=U3(PCBComponent_1)
+Added Pin To Net: NetName=NetC6_1 Pin=U3-1
+Added Pin To Net: NetName=NetC6_2 Pin=U3-2
+Added Pin To Net: NetName=GND Pin=U3-4
+Added Pin To Net: NetName=VEE Pin=U3-5
+Added Pin To Net: NetName=VCC Pin=U3-7
+Added Member To Class: ClassName=Sheet1 Member=Component U3 Component_1
+Added Room: Name=Sheet1

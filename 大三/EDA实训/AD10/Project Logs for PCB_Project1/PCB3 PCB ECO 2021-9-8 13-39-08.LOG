@@ -1,0 +1,5 @@
+Change Component Comment : Designator=P2 Old Comment=Header 2 New Comment=CON1
+Change Component Designator: OldDesignator=P2 NewDesignator=Vs
+Change Component Designator: OldDesignator=P3 NewDesignator=Vo
+Change Net Name : Old Net Name=NetP2_1 New Net Name=NetR9_1
+Change Net Name : Old Net Name=NetP3_1 New Net Name=NetR1_1

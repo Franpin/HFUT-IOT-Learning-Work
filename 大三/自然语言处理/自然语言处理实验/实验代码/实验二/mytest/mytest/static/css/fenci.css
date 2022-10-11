@@ -1,0 +1,101 @@
+.hometitle
+{
+font-family:Georgia;color:#8CC1EC;font-size:40px;position: absolute;left:350px;top:0px;
+}
+.icon1{
+	position:absolute;top:0px;right:350px;
+}
+.bar{
+	position:absolute;top:50px;height:9px;width:100%;background-color:#8CC1EC;
+}
+.icon2{
+	position:absolute;top:100px;left:400px;
+}
+.littitle1{
+	position:absolute;top:280px;left:435px;color:#428bca;
+}
+.icon3{
+	position:absolute;top:100px;right:400px;
+}
+.icon4{
+	position:absolute;top:350px;left:400px;
+}
+.littitle2{
+	position:absolute;top:530px;left:470px;color:#428bca;
+}
+.icon5{
+position:absolute;top:350px;right:400px;
+}
+.littitle3{
+	position:absolute;top:530px;right:460px;color:#428bca;
+}
+.littitle4{
+	position:absolute;top:280px;right:455px;color:#428bca;
+}
+
+.listButton{
+	position:absolute;top:280px;right:455px;color:#428bca;
+}
+
+.songciPanel {
+	position:absolute;
+	top:50px;
+	right:100px;
+	width: 500px;
+}
+
+.check {
+	position:absolute;
+	top:100px;
+	left:50px;
+	width: 200px;
+}
+
+.cipailabel {
+	position:absolute;
+	font-family:Georgia;
+	/* color:#428bca; */
+	font-size:20px;
+	margin: 10px;
+	top:  100px;
+	/* background-color: #F3B091; */
+}
+
+.margin {
+	margin:10px;
+}
+
+.choice {
+	margin: 10px;
+}
+
+.show {
+	top: 300px;
+	width: 100%;
+	height: 200px;
+	margin-top: 100px;
+}
+
+.title {
+	font-size: 15px;
+	color:#428bca;
+	text-align: center;
+}
+
+.body {
+	font-size: 20px;
+	font-family: sans-serif;
+	text-align: center;
+}
+
+.input {
+    -web-kit-appearance:none;
+    -moz-appearance: none;
+    font-size:1.4em;
+    height:2.7em;
+    border-radius:4px;
+    border:1px solid #c8cccf;
+    color:#6a6f77;
+    outline:0;
+    margin-left: 15px;
+}

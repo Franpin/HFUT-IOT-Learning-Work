@@ -1,0 +1,650 @@
+
+*** Running vivado
+    with args -log Main.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source Main.tcl
+
+
+****** Vivado v2019.1 (64-bit)
+  **** SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+  **** IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source Main.tcl -notrace
+Command: synth_design -top Main -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 18896 
+WARNING: [Synth 8-1849] concatenation with unsized literal; will interpret as 32 bits [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/DataSelector_2to1_sa.v:11]
+WARNING: [Synth 8-1849] concatenation with unsized literal; will interpret as 32 bits [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/SignExtend.v:15]
+WARNING: [Synth 8-1849] concatenation with unsized literal; will interpret as 32 bits [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/SignExtend.v:17]
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 475.281 ; gain = 174.891
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'Main' [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/Main.v:2]
+	Parameter endReg bound to: 5'b11111 
+INFO: [Synth 8-6157] synthesizing module 'PC' [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/PC.v:8]
+WARNING: [Synth 8-567] referenced signal 'outside_pc' should be on the sensitivity list [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/PC.v:12]
+WARNING: [Synth 8-567] referenced signal 'i_pc' should be on the sensitivity list [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/PC.v:12]
+INFO: [Synth 8-6155] done synthesizing module 'PC' (1#1) [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/PC.v:8]
+INFO: [Synth 8-6157] synthesizing module 'PCAddFour' [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/PCAddFour.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'PCAddFour' (2#1) [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/PCAddFour.v:4]
+INFO: [Synth 8-6157] synthesizing module 'InstructionMEM' [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/InstructionMEM.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'InstructionMEM' (3#1) [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/InstructionMEM.v:6]
+INFO: [Synth 8-6157] synthesizing module 'IR' [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/IR.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'IR' (4#1) [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/IR.v:6]
+INFO: [Synth 8-6157] synthesizing module 'PCJump' [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/PCJump.v:6]
+WARNING: [Synth 8-567] referenced signal 'pc' should be on the sensitivity list [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/PCJump.v:12]
+INFO: [Synth 8-6155] done synthesizing module 'PCJump' (5#1) [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/PCJump.v:6]
+INFO: [Synth 8-6157] synthesizing module 'DataSelector_3to1' [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/DataSelector_3to1.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'DataSelector_3to1' (6#1) [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/DataSelector_3to1.v:7]
+INFO: [Synth 8-6157] synthesizing module 'RegFile' [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/RegFile.v:10]
+WARNING: [Synth 8-567] referenced signal 'RegWre' should be on the sensitivity list [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/RegFile.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'RegFile' (7#1) [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/RegFile.v:10]
+INFO: [Synth 8-6157] synthesizing module 'ADR' [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/ADR.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'ADR' (8#1) [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/ADR.v:5]
+INFO: [Synth 8-6157] synthesizing module 'BDR' [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/BDR.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'BDR' (9#1) [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/BDR.v:5]
+INFO: [Synth 8-6157] synthesizing module 'SignExtend' [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/SignExtend.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'SignExtend' (10#1) [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/SignExtend.v:5]
+INFO: [Synth 8-6157] synthesizing module 'DataSelector_2to1_sa' [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/DataSelector_2to1_sa.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'DataSelector_2to1_sa' (11#1) [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/DataSelector_2to1_sa.v:6]
+INFO: [Synth 8-6157] synthesizing module 'DataSelector_2to1' [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/DataSelector_2to1.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'DataSelector_2to1' (12#1) [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/DataSelector_2to1.v:6]
+INFO: [Synth 8-6157] synthesizing module 'ALU' [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/ALU.v:1]
+INFO: [Synth 8-226] default block is never used [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/ALU.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'ALU' (13#1) [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/ALU.v:1]
+INFO: [Synth 8-6157] synthesizing module 'ALUoutDR' [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/ALUoutDR.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'ALUoutDR' (14#1) [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/ALUoutDR.v:5]
+INFO: [Synth 8-6157] synthesizing module 'DataMEM' [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/DataMEM.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'DataMEM' (15#1) [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/DataMEM.v:6]
+INFO: [Synth 8-6157] synthesizing module 'DBDR' [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/DBDR.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'DBDR' (16#1) [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/DBDR.v:5]
+INFO: [Synth 8-6157] synthesizing module 'PCAddImm' [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/PCAddImm.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'PCAddImm' (17#1) [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/PCAddImm.v:5]
+INFO: [Synth 8-6157] synthesizing module 'DataSelector_4to1' [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/DataSelector_4to1.v:8]
+INFO: [Synth 8-226] default block is never used [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/DataSelector_4to1.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'DataSelector_4to1' (18#1) [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/DataSelector_4to1.v:8]
+INFO: [Synth 8-6157] synthesizing module 'ControlUnit' [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/ControlUnit.v:7]
+INFO: [Synth 8-6157] synthesizing module 'DFlipFlop' [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/DFileFlop.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'DFlipFlop' (19#1) [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/DFileFlop.v:6]
+INFO: [Synth 8-6157] synthesizing module 'NextState' [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/NextState.v:5]
+	Parameter IF bound to: 3'b000 
+	Parameter ID bound to: 3'b001 
+	Parameter aEXE bound to: 3'b110 
+	Parameter bEXE bound to: 3'b101 
+	Parameter cEXE bound to: 3'b010 
+	Parameter MEM bound to: 3'b011 
+	Parameter aWB bound to: 3'b111 
+	Parameter cWB bound to: 3'b100 
+INFO: [Synth 8-226] default block is never used [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/NextState.v:18]
+INFO: [Synth 8-6155] done synthesizing module 'NextState' (20#1) [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/NextState.v:5]
+INFO: [Synth 8-6157] synthesizing module 'OutputFunc' [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/OutputFunc.v:17]
+	Parameter IF bound to: 3'b000 
+	Parameter ID bound to: 3'b001 
+	Parameter aEXE bound to: 3'b110 
+	Parameter bEXE bound to: 3'b101 
+	Parameter cEXE bound to: 3'b010 
+	Parameter MEM bound to: 3'b011 
+	Parameter aWB bound to: 3'b111 
+	Parameter cWB bound to: 3'b100 
+	Parameter addi bound to: 6'b000010 
+	Parameter ori bound to: 6'b010010 
+	Parameter sll bound to: 6'b011000 
+	Parameter add bound to: 6'b000000 
+	Parameter sub bound to: 6'b000001 
+	Parameter slt bound to: 6'b100110 
+	Parameter slti bound to: 6'b100111 
+	Parameter sw bound to: 6'b110000 
+	Parameter lw bound to: 6'b110001 
+	Parameter beq bound to: 6'b110100 
+	Parameter j bound to: 6'b111000 
+	Parameter jr bound to: 6'b111001 
+	Parameter Or bound to: 6'b010000 
+	Parameter And bound to: 6'b010001 
+	Parameter jal bound to: 6'b111010 
+	Parameter halt bound to: 6'b111111 
+WARNING: [Synth 8-567] referenced signal 'opcode' should be on the sensitivity list [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/OutputFunc.v:49]
+WARNING: [Synth 8-567] referenced signal 'zero' should be on the sensitivity list [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/OutputFunc.v:49]
+INFO: [Synth 8-6155] done synthesizing module 'OutputFunc' (21#1) [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/OutputFunc.v:17]
+INFO: [Synth 8-6155] done synthesizing module 'ControlUnit' (22#1) [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/ControlUnit.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'Main' (23#1) [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/Main.v:2]
+WARNING: [Synth 8-3331] design RegFile has unconnected port clk
+WARNING: [Synth 8-3331] design PCJump has unconnected port pc[27]
+WARNING: [Synth 8-3331] design PCJump has unconnected port pc[26]
+WARNING: [Synth 8-3331] design PCJump has unconnected port pc[25]
+WARNING: [Synth 8-3331] design PCJump has unconnected port pc[24]
+WARNING: [Synth 8-3331] design PCJump has unconnected port pc[23]
+WARNING: [Synth 8-3331] design PCJump has unconnected port pc[22]
+WARNING: [Synth 8-3331] design PCJump has unconnected port pc[21]
+WARNING: [Synth 8-3331] design PCJump has unconnected port pc[20]
+WARNING: [Synth 8-3331] design PCJump has unconnected port pc[19]
+WARNING: [Synth 8-3331] design PCJump has unconnected port pc[18]
+WARNING: [Synth 8-3331] design PCJump has unconnected port pc[17]
+WARNING: [Synth 8-3331] design PCJump has unconnected port pc[16]
+WARNING: [Synth 8-3331] design PCJump has unconnected port pc[15]
+WARNING: [Synth 8-3331] design PCJump has unconnected port pc[14]
+WARNING: [Synth 8-3331] design PCJump has unconnected port pc[13]
+WARNING: [Synth 8-3331] design PCJump has unconnected port pc[12]
+WARNING: [Synth 8-3331] design PCJump has unconnected port pc[11]
+WARNING: [Synth 8-3331] design PCJump has unconnected port pc[10]
+WARNING: [Synth 8-3331] design PCJump has unconnected port pc[9]
+WARNING: [Synth 8-3331] design PCJump has unconnected port pc[8]
+WARNING: [Synth 8-3331] design PCJump has unconnected port pc[7]
+WARNING: [Synth 8-3331] design PCJump has unconnected port pc[6]
+WARNING: [Synth 8-3331] design PCJump has unconnected port pc[5]
+WARNING: [Synth 8-3331] design PCJump has unconnected port pc[4]
+WARNING: [Synth 8-3331] design PCJump has unconnected port pc[3]
+WARNING: [Synth 8-3331] design PCJump has unconnected port pc[2]
+WARNING: [Synth 8-3331] design PCJump has unconnected port pc[1]
+WARNING: [Synth 8-3331] design PCJump has unconnected port pc[0]
+WARNING: [Synth 8-3331] design PC has unconnected port clk
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 530.625 ; gain = 230.234
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 530.625 ; gain = 230.234
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 530.625 ; gain = 230.234
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5546] ROM "mem" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "mem" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "mem" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "mem" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5587] ROM size for "ALUOp" is below threshold of ROM address width. It will be mapped to LUTs
+WARNING: [Synth 8-327] inferring latch for variable 'o_pc_reg' [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/PC.v:15]
+WARNING: [Synth 8-327] inferring latch for variable 'instruction_reg' [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/InstructionMEM.v:98]
+WARNING: [Synth 8-327] inferring latch for variable 'instruction_reg' [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/InstructionMEM.v:98]
+WARNING: [Synth 8-327] inferring latch for variable 'instruction_reg' [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/InstructionMEM.v:98]
+WARNING: [Synth 8-327] inferring latch for variable 'instruction_reg' [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/InstructionMEM.v:98]
+WARNING: [Synth 8-327] inferring latch for variable 'register_reg[0]' [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/RegFile.v:20]
+WARNING: [Synth 8-327] inferring latch for variable 'register_reg[1]' [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/RegFile.v:20]
+WARNING: [Synth 8-327] inferring latch for variable 'register_reg[2]' [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/RegFile.v:20]
+WARNING: [Synth 8-327] inferring latch for variable 'register_reg[3]' [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/RegFile.v:20]
+WARNING: [Synth 8-327] inferring latch for variable 'register_reg[4]' [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/RegFile.v:20]
+WARNING: [Synth 8-327] inferring latch for variable 'register_reg[5]' [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/RegFile.v:20]
+WARNING: [Synth 8-327] inferring latch for variable 'register_reg[6]' [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/RegFile.v:20]
+WARNING: [Synth 8-327] inferring latch for variable 'register_reg[7]' [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/RegFile.v:20]
+WARNING: [Synth 8-327] inferring latch for variable 'register_reg[8]' [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/RegFile.v:20]
+WARNING: [Synth 8-327] inferring latch for variable 'register_reg[9]' [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/RegFile.v:20]
+WARNING: [Synth 8-327] inferring latch for variable 'register_reg[10]' [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/RegFile.v:20]
+WARNING: [Synth 8-327] inferring latch for variable 'register_reg[11]' [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/RegFile.v:20]
+WARNING: [Synth 8-327] inferring latch for variable 'register_reg[12]' [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/RegFile.v:20]
+WARNING: [Synth 8-327] inferring latch for variable 'register_reg[13]' [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/RegFile.v:20]
+WARNING: [Synth 8-327] inferring latch for variable 'register_reg[14]' [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/RegFile.v:20]
+WARNING: [Synth 8-327] inferring latch for variable 'register_reg[15]' [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/RegFile.v:20]
+WARNING: [Synth 8-327] inferring latch for variable 'register_reg[16]' [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/RegFile.v:20]
+WARNING: [Synth 8-327] inferring latch for variable 'register_reg[17]' [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/RegFile.v:20]
+WARNING: [Synth 8-327] inferring latch for variable 'register_reg[18]' [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/RegFile.v:20]
+WARNING: [Synth 8-327] inferring latch for variable 'register_reg[19]' [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/RegFile.v:20]
+WARNING: [Synth 8-327] inferring latch for variable 'register_reg[20]' [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/RegFile.v:20]
+WARNING: [Synth 8-327] inferring latch for variable 'register_reg[21]' [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/RegFile.v:20]
+WARNING: [Synth 8-327] inferring latch for variable 'register_reg[22]' [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/RegFile.v:20]
+WARNING: [Synth 8-327] inferring latch for variable 'register_reg[23]' [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/RegFile.v:20]
+WARNING: [Synth 8-327] inferring latch for variable 'register_reg[24]' [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/RegFile.v:20]
+WARNING: [Synth 8-327] inferring latch for variable 'register_reg[25]' [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/RegFile.v:20]
+WARNING: [Synth 8-327] inferring latch for variable 'register_reg[26]' [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/RegFile.v:20]
+WARNING: [Synth 8-327] inferring latch for variable 'register_reg[27]' [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/RegFile.v:20]
+WARNING: [Synth 8-327] inferring latch for variable 'register_reg[28]' [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/RegFile.v:20]
+WARNING: [Synth 8-327] inferring latch for variable 'register_reg[29]' [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/RegFile.v:20]
+WARNING: [Synth 8-327] inferring latch for variable 'register_reg[30]' [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/RegFile.v:20]
+WARNING: [Synth 8-327] inferring latch for variable 'register_reg[31]' [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/RegFile.v:20]
+WARNING: [Synth 8-327] inferring latch for variable 'o_data_reg' [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/DataMEM.v:23]
+WARNING: [Synth 8-327] inferring latch for variable 'memory_reg[0]' [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/DataMEM.v:18]
+WARNING: [Synth 8-327] inferring latch for variable 'memory_reg[1]' [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/DataMEM.v:18]
+WARNING: [Synth 8-327] inferring latch for variable 'memory_reg[2]' [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/DataMEM.v:18]
+WARNING: [Synth 8-327] inferring latch for variable 'memory_reg[3]' [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/DataMEM.v:18]
+WARNING: [Synth 8-327] inferring latch for variable 'memory_reg[4]' [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/DataMEM.v:18]
+WARNING: [Synth 8-327] inferring latch for variable 'memory_reg[5]' [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/DataMEM.v:18]
+WARNING: [Synth 8-327] inferring latch for variable 'memory_reg[6]' [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/DataMEM.v:18]
+WARNING: [Synth 8-327] inferring latch for variable 'memory_reg[7]' [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/DataMEM.v:18]
+WARNING: [Synth 8-327] inferring latch for variable 'memory_reg[8]' [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/DataMEM.v:18]
+WARNING: [Synth 8-327] inferring latch for variable 'memory_reg[9]' [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/DataMEM.v:18]
+WARNING: [Synth 8-327] inferring latch for variable 'memory_reg[10]' [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/DataMEM.v:18]
+WARNING: [Synth 8-327] inferring latch for variable 'memory_reg[11]' [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/DataMEM.v:18]
+WARNING: [Synth 8-327] inferring latch for variable 'memory_reg[12]' [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/DataMEM.v:18]
+WARNING: [Synth 8-327] inferring latch for variable 'memory_reg[13]' [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/DataMEM.v:18]
+WARNING: [Synth 8-327] inferring latch for variable 'memory_reg[14]' [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/DataMEM.v:18]
+WARNING: [Synth 8-327] inferring latch for variable 'memory_reg[15]' [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/DataMEM.v:18]
+WARNING: [Synth 8-327] inferring latch for variable 'memory_reg[16]' [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/DataMEM.v:18]
+WARNING: [Synth 8-327] inferring latch for variable 'memory_reg[17]' [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/DataMEM.v:18]
+WARNING: [Synth 8-327] inferring latch for variable 'memory_reg[18]' [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/DataMEM.v:18]
+WARNING: [Synth 8-327] inferring latch for variable 'memory_reg[19]' [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/DataMEM.v:18]
+WARNING: [Synth 8-327] inferring latch for variable 'memory_reg[20]' [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/DataMEM.v:18]
+WARNING: [Synth 8-327] inferring latch for variable 'memory_reg[21]' [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/DataMEM.v:18]
+WARNING: [Synth 8-327] inferring latch for variable 'memory_reg[22]' [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/DataMEM.v:18]
+WARNING: [Synth 8-327] inferring latch for variable 'memory_reg[23]' [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/DataMEM.v:18]
+WARNING: [Synth 8-327] inferring latch for variable 'memory_reg[24]' [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/DataMEM.v:18]
+WARNING: [Synth 8-327] inferring latch for variable 'memory_reg[25]' [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/DataMEM.v:18]
+WARNING: [Synth 8-327] inferring latch for variable 'memory_reg[26]' [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/DataMEM.v:18]
+WARNING: [Synth 8-327] inferring latch for variable 'memory_reg[27]' [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/DataMEM.v:18]
+WARNING: [Synth 8-327] inferring latch for variable 'memory_reg[28]' [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/DataMEM.v:18]
+WARNING: [Synth 8-327] inferring latch for variable 'memory_reg[29]' [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/DataMEM.v:18]
+WARNING: [Synth 8-327] inferring latch for variable 'memory_reg[30]' [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/DataMEM.v:18]
+WARNING: [Synth 8-327] inferring latch for variable 'memory_reg[31]' [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/DataMEM.v:18]
+WARNING: [Synth 8-327] inferring latch for variable 'memory_reg[32]' [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/DataMEM.v:18]
+WARNING: [Synth 8-327] inferring latch for variable 'memory_reg[33]' [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/DataMEM.v:18]
+WARNING: [Synth 8-327] inferring latch for variable 'memory_reg[34]' [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/DataMEM.v:18]
+WARNING: [Synth 8-327] inferring latch for variable 'memory_reg[35]' [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/DataMEM.v:18]
+WARNING: [Synth 8-327] inferring latch for variable 'memory_reg[36]' [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/DataMEM.v:18]
+WARNING: [Synth 8-327] inferring latch for variable 'memory_reg[37]' [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/DataMEM.v:18]
+WARNING: [Synth 8-327] inferring latch for variable 'memory_reg[38]' [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/DataMEM.v:18]
+WARNING: [Synth 8-327] inferring latch for variable 'memory_reg[39]' [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/DataMEM.v:18]
+WARNING: [Synth 8-327] inferring latch for variable 'memory_reg[40]' [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/DataMEM.v:18]
+WARNING: [Synth 8-327] inferring latch for variable 'memory_reg[41]' [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/DataMEM.v:18]
+WARNING: [Synth 8-327] inferring latch for variable 'memory_reg[42]' [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/DataMEM.v:18]
+WARNING: [Synth 8-327] inferring latch for variable 'memory_reg[43]' [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/DataMEM.v:18]
+WARNING: [Synth 8-327] inferring latch for variable 'memory_reg[44]' [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/DataMEM.v:18]
+WARNING: [Synth 8-327] inferring latch for variable 'memory_reg[45]' [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/DataMEM.v:18]
+WARNING: [Synth 8-327] inferring latch for variable 'memory_reg[46]' [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/DataMEM.v:18]
+WARNING: [Synth 8-327] inferring latch for variable 'memory_reg[47]' [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/DataMEM.v:18]
+WARNING: [Synth 8-327] inferring latch for variable 'memory_reg[48]' [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/DataMEM.v:18]
+WARNING: [Synth 8-327] inferring latch for variable 'memory_reg[49]' [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/DataMEM.v:18]
+WARNING: [Synth 8-327] inferring latch for variable 'memory_reg[50]' [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/DataMEM.v:18]
+WARNING: [Synth 8-327] inferring latch for variable 'memory_reg[51]' [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/DataMEM.v:18]
+WARNING: [Synth 8-327] inferring latch for variable 'memory_reg[52]' [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/DataMEM.v:18]
+WARNING: [Synth 8-327] inferring latch for variable 'memory_reg[53]' [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/DataMEM.v:18]
+WARNING: [Synth 8-327] inferring latch for variable 'memory_reg[54]' [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/DataMEM.v:18]
+WARNING: [Synth 8-327] inferring latch for variable 'memory_reg[55]' [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/DataMEM.v:18]
+WARNING: [Synth 8-327] inferring latch for variable 'memory_reg[56]' [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/DataMEM.v:18]
+WARNING: [Synth 8-327] inferring latch for variable 'memory_reg[57]' [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/DataMEM.v:18]
+WARNING: [Synth 8-327] inferring latch for variable 'memory_reg[58]' [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/DataMEM.v:18]
+WARNING: [Synth 8-327] inferring latch for variable 'memory_reg[59]' [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/DataMEM.v:18]
+WARNING: [Synth 8-327] inferring latch for variable 'memory_reg[60]' [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/DataMEM.v:18]
+WARNING: [Synth 8-327] inferring latch for variable 'memory_reg[61]' [D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/DataMEM.v:18]
+INFO: [Common 17-14] Message 'Synth 8-327' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 627.828 ; gain = 327.438
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 3     
+	   3 Input     32 Bit       Adders := 1     
+	   2 Input      7 Bit       Adders := 3     
++---Registers : 
+	               32 Bit    Registers := 5     
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 5     
+	   4 Input     32 Bit        Muxes := 2     
+	  81 Input      8 Bit        Muxes := 4     
+	   4 Input      8 Bit        Muxes := 36    
+	   2 Input      8 Bit        Muxes := 62    
+	   4 Input      5 Bit        Muxes := 1     
+	   4 Input      3 Bit        Muxes := 1     
+	   9 Input      3 Bit        Muxes := 2     
+	   4 Input      2 Bit        Muxes := 4     
+	   2 Input      2 Bit        Muxes := 4     
+	   3 Input      2 Bit        Muxes := 1     
+	   5 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 100   
+	   5 Input      1 Bit        Muxes := 48    
+	   4 Input      1 Bit        Muxes := 16    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module PC 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module PCAddFour 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+Module InstructionMEM 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      7 Bit       Adders := 3     
++---Muxes : 
+	  81 Input      8 Bit        Muxes := 4     
+Module IR 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module DataSelector_3to1 
+Detailed RTL Component Info : 
++---Muxes : 
+	   4 Input      5 Bit        Muxes := 1     
+Module RegFile 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 32    
+Module ADR 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module BDR 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module SignExtend 
+Detailed RTL Component Info : 
++---Muxes : 
+	   4 Input     32 Bit        Muxes := 1     
+Module DataSelector_2to1_sa 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+Module DataSelector_2to1 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+Module ALU 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   3 Input     32 Bit       Adders := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module ALUoutDR 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module DataMEM 
+Detailed RTL Component Info : 
++---Muxes : 
+	   4 Input      8 Bit        Muxes := 36    
+	   2 Input      8 Bit        Muxes := 62    
+	   4 Input      2 Bit        Muxes := 4     
+	   5 Input      1 Bit        Muxes := 48    
+	   2 Input      1 Bit        Muxes := 61    
+	   4 Input      1 Bit        Muxes := 16    
+Module DBDR 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module PCAddImm 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+Module DataSelector_4to1 
+Detailed RTL Component Info : 
++---Muxes : 
+	   4 Input     32 Bit        Muxes := 1     
+Module DFlipFlop 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
+Module NextState 
+Detailed RTL Component Info : 
++---Muxes : 
+	   4 Input      3 Bit        Muxes := 1     
+	   9 Input      3 Bit        Muxes := 1     
+Module OutputFunc 
+Detailed RTL Component Info : 
++---Muxes : 
+	   9 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 4     
+	   3 Input      2 Bit        Muxes := 1     
+	   5 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 5     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+WARNING: [Synth 8-3331] design PCAddImm has unconnected port imm[31]
+WARNING: [Synth 8-3331] design PCAddImm has unconnected port imm[30]
+WARNING: [Synth 8-3331] design RegFile has unconnected port clk
+WARNING: [Synth 8-3331] design InstructionMEM has unconnected port addr[31]
+WARNING: [Synth 8-3331] design InstructionMEM has unconnected port addr[30]
+WARNING: [Synth 8-3331] design InstructionMEM has unconnected port addr[29]
+WARNING: [Synth 8-3331] design InstructionMEM has unconnected port addr[28]
+WARNING: [Synth 8-3331] design InstructionMEM has unconnected port addr[27]
+WARNING: [Synth 8-3331] design InstructionMEM has unconnected port addr[26]
+WARNING: [Synth 8-3331] design InstructionMEM has unconnected port addr[25]
+WARNING: [Synth 8-3331] design InstructionMEM has unconnected port addr[24]
+WARNING: [Synth 8-3331] design InstructionMEM has unconnected port addr[23]
+WARNING: [Synth 8-3331] design InstructionMEM has unconnected port addr[22]
+WARNING: [Synth 8-3331] design InstructionMEM has unconnected port addr[21]
+WARNING: [Synth 8-3331] design InstructionMEM has unconnected port addr[20]
+WARNING: [Synth 8-3331] design InstructionMEM has unconnected port addr[19]
+WARNING: [Synth 8-3331] design InstructionMEM has unconnected port addr[18]
+WARNING: [Synth 8-3331] design InstructionMEM has unconnected port addr[17]
+WARNING: [Synth 8-3331] design InstructionMEM has unconnected port addr[16]
+WARNING: [Synth 8-3331] design InstructionMEM has unconnected port addr[15]
+WARNING: [Synth 8-3331] design InstructionMEM has unconnected port addr[14]
+WARNING: [Synth 8-3331] design InstructionMEM has unconnected port addr[13]
+WARNING: [Synth 8-3331] design InstructionMEM has unconnected port addr[12]
+WARNING: [Synth 8-3331] design InstructionMEM has unconnected port addr[11]
+WARNING: [Synth 8-3331] design InstructionMEM has unconnected port addr[10]
+WARNING: [Synth 8-3331] design InstructionMEM has unconnected port addr[9]
+WARNING: [Synth 8-3331] design InstructionMEM has unconnected port addr[8]
+WARNING: [Synth 8-3331] design InstructionMEM has unconnected port addr[7]
+WARNING: [Synth 8-3331] design PC has unconnected port clk
+WARNING: [Synth 8-3332] Sequential element (InstructionMEM/instruction_reg[7]) is unused and will be removed from module Main.
+WARNING: [Synth 8-3332] Sequential element (InstructionMEM/instruction_reg[6]) is unused and will be removed from module Main.
+WARNING: [Synth 8-3332] Sequential element (InstructionMEM/instruction_reg[5]) is unused and will be removed from module Main.
+WARNING: [Synth 8-3332] Sequential element (InstructionMEM/instruction_reg[4]) is unused and will be removed from module Main.
+WARNING: [Synth 8-3332] Sequential element (InstructionMEM/instruction_reg[3]) is unused and will be removed from module Main.
+WARNING: [Synth 8-3332] Sequential element (InstructionMEM/instruction_reg[2]) is unused and will be removed from module Main.
+WARNING: [Synth 8-3332] Sequential element (InstructionMEM/instruction_reg[1]) is unused and will be removed from module Main.
+WARNING: [Synth 8-3332] Sequential element (InstructionMEM/instruction_reg[0]) is unused and will be removed from module Main.
+WARNING: [Synth 8-3332] Sequential element (InstructionMEM/instruction_reg[15]) is unused and will be removed from module Main.
+WARNING: [Synth 8-3332] Sequential element (InstructionMEM/instruction_reg[14]) is unused and will be removed from module Main.
+WARNING: [Synth 8-3332] Sequential element (InstructionMEM/instruction_reg[13]) is unused and will be removed from module Main.
+WARNING: [Synth 8-3332] Sequential element (InstructionMEM/instruction_reg[12]) is unused and will be removed from module Main.
+WARNING: [Synth 8-3332] Sequential element (InstructionMEM/instruction_reg[11]) is unused and will be removed from module Main.
+WARNING: [Synth 8-3332] Sequential element (InstructionMEM/instruction_reg[10]) is unused and will be removed from module Main.
+WARNING: [Synth 8-3332] Sequential element (InstructionMEM/instruction_reg[9]) is unused and will be removed from module Main.
+WARNING: [Synth 8-3332] Sequential element (InstructionMEM/instruction_reg[8]) is unused and will be removed from module Main.
+WARNING: [Synth 8-3332] Sequential element (InstructionMEM/instruction_reg[23]) is unused and will be removed from module Main.
+WARNING: [Synth 8-3332] Sequential element (InstructionMEM/instruction_reg[22]) is unused and will be removed from module Main.
+WARNING: [Synth 8-3332] Sequential element (InstructionMEM/instruction_reg[21]) is unused and will be removed from module Main.
+WARNING: [Synth 8-3332] Sequential element (InstructionMEM/instruction_reg[20]) is unused and will be removed from module Main.
+WARNING: [Synth 8-3332] Sequential element (InstructionMEM/instruction_reg[19]) is unused and will be removed from module Main.
+WARNING: [Synth 8-3332] Sequential element (InstructionMEM/instruction_reg[18]) is unused and will be removed from module Main.
+WARNING: [Synth 8-3332] Sequential element (InstructionMEM/instruction_reg[17]) is unused and will be removed from module Main.
+WARNING: [Synth 8-3332] Sequential element (InstructionMEM/instruction_reg[16]) is unused and will be removed from module Main.
+WARNING: [Synth 8-3332] Sequential element (InstructionMEM/instruction_reg[31]) is unused and will be removed from module Main.
+WARNING: [Synth 8-3332] Sequential element (InstructionMEM/instruction_reg[30]) is unused and will be removed from module Main.
+WARNING: [Synth 8-3332] Sequential element (InstructionMEM/instruction_reg[29]) is unused and will be removed from module Main.
+WARNING: [Synth 8-3332] Sequential element (InstructionMEM/instruction_reg[28]) is unused and will be removed from module Main.
+WARNING: [Synth 8-3332] Sequential element (InstructionMEM/instruction_reg[27]) is unused and will be removed from module Main.
+WARNING: [Synth 8-3332] Sequential element (InstructionMEM/instruction_reg[26]) is unused and will be removed from module Main.
+WARNING: [Synth 8-3332] Sequential element (InstructionMEM/instruction_reg[25]) is unused and will be removed from module Main.
+WARNING: [Synth 8-3332] Sequential element (InstructionMEM/instruction_reg[24]) is unused and will be removed from module Main.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:36 ; elapsed = 00:00:36 . Memory (MB): peak = 829.695 ; gain = 529.305
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 829.695 ; gain = 529.305
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:38 ; elapsed = 00:00:38 . Memory (MB): peak = 829.695 ; gain = 529.305
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:40 ; elapsed = 00:00:40 . Memory (MB): peak = 829.695 ; gain = 529.305
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:40 ; elapsed = 00:00:40 . Memory (MB): peak = 829.695 ; gain = 529.305
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:40 ; elapsed = 00:00:40 . Memory (MB): peak = 829.695 ; gain = 529.305
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:40 ; elapsed = 00:00:40 . Memory (MB): peak = 829.695 ; gain = 529.305
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:40 ; elapsed = 00:00:40 . Memory (MB): peak = 829.695 ; gain = 529.305
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:40 ; elapsed = 00:00:40 . Memory (MB): peak = 829.695 ; gain = 529.305
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |    12|
+|2     |CARRY4 |    36|
+|3     |LUT1   |     2|
+|4     |LUT2   |    96|
+|5     |LUT3   |   529|
+|6     |LUT4   |   161|
+|7     |LUT5   |   203|
+|8     |LUT6   |  1665|
+|9     |MUXF7  |   576|
+|10    |MUXF8  |   128|
+|11    |FDRE   |   174|
+|12    |LD     |  1600|
+|13    |IBUF   |    34|
+|14    |OBUF   |    64|
++------+-------+------+
+
+Report Instance Areas: 
++------+--------------+------------+------+
+|      |Instance      |Module      |Cells |
++------+--------------+------------+------+
+|1     |top           |            |  5280|
+|2     |  ADR         |ADR         |    84|
+|3     |  ALU         |ALU         |    51|
+|4     |  ALUoutDR    |ALUoutDR    |   402|
+|5     |  BDR         |BDR         |   478|
+|6     |  ControlUnit |ControlUnit |    90|
+|7     |    DFlipFlop |DFlipFlop   |    90|
+|8     |  DBDR        |DBDR        |    32|
+|9     |  DataMEM     |DataMEM     |  1473|
+|10    |  IR          |IR          |   551|
+|11    |  PC          |PC          |   137|
+|12    |  PCAddFour   |PCAddFour   |     8|
+|13    |  PCAddImm    |PCAddImm    |     8|
+|14    |  RegFile     |RegFile     |  1856|
++------+--------------+------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:40 ; elapsed = 00:00:40 . Memory (MB): peak = 829.695 ; gain = 529.305
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 202 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:40 ; elapsed = 00:00:40 . Memory (MB): peak = 829.695 ; gain = 529.305
+Synthesis Optimization Complete : Time (s): cpu = 00:00:40 ; elapsed = 00:00:40 . Memory (MB): peak = 829.695 ; gain = 529.305
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 2340 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 1 inverter(s) to 32 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 829.695 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1600 instances were transformed.
+  LD => LDCE: 1568 instances
+  LD => LDCE (inverted pins: G): 32 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+64 Infos, 200 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:45 ; elapsed = 00:00:48 . Memory (MB): peak = 829.695 ; gain = 529.305
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 829.695 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'D:/Vivado/WorkSpace/CPU_test4fromcsdn/CPU_test4fromcsdn.runs/synth_1/Main.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file Main_utilization_synth.rpt -pb Main_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu Dec 23 19:29:53 2021...

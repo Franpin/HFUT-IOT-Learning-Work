@@ -1,0 +1,103 @@
+#include"stdio.h"
+int main(){
+	int n;
+	int num[1000][3];
+	scanf("%d",&n);
+	for(int i=0;i<n;i++){//输入数据 
+		scanf("%d %d %d",&num[i][0],&num[i][1],&num[i][2]);
+	}
+	for(int i=0;i<n;i++){//穷举列出运算式子的组合 
+		int flag=0;//设置逻辑标志 
+		if((num[i][0]+num[i][1])+num[i][2]==24||num[i][0]+(num[i][1]+num[i][2])==24){
+			flag=1;
+		}
+		if((num[i][0]+num[i][1])-num[i][2]==24||num[i][0]+(num[i][1]-num[i][2])==24){
+			flag=1;
+		}
+		if((num[i][0]+num[i][1])*num[i][2]==24||num[i][0]+(num[i][1]*num[i][2])==24){
+			flag=1;
+		}
+		if((num[i][0]+num[i][1])/num[i][2]==24||num[i][0]+(num[i][1]/num[i][2])==24){
+			flag=1;
+		}
+		if((num[i][0]+num[i][1])%num[i][2]==24||num[i][0]+(num[i][1]%num[i][2])==24){
+			flag=1;
+		}
+		if((num[i][0]-num[i][1])+num[i][2]==24||num[i][0]-(num[i][1]+num[i][2])==24){
+			flag=1;
+		}
+		if((num[i][0]-num[i][1])-num[i][2]==24||num[i][0]-(num[i][1]-num[i][2])==24){
+			flag=1;
+		}
+		if((num[i][0]-num[i][1])*num[i][2]==24||num[i][0]-(num[i][1]*num[i][2])==24){
+			flag=1;
+		}
+		if((num[i][0]-num[i][1])/num[i][2]==24||num[i][0]-(num[i][1]/num[i][2])==24){
+			flag=1;
+		}
+		if((num[i][0]-num[i][1])%num[i][2]==24||num[i][0]-(num[i][1]%num[i][2])==24){
+			flag=1;
+		}
+		if((num[i][0]*num[i][1])+num[i][2]==24||num[i][0]*(num[i][1]+num[i][2])==24){
+			flag=1;
+		}
+		if((num[i][0]*num[i][1])-num[i][2]==24||num[i][0]*(num[i][1]-num[i][2])==24){
+			flag=1;
+		}
+		if((num[i][0]*num[i][1])*num[i][2]==24||num[i][0]*(num[i][1]*num[i][2])==24){
+			flag=1;
+		}
+		if((num[i][0]*num[i][1])/num[i][2]==24||num[i][0]*(num[i][1]/num[i][2])==24){
+			flag=1;
+		}
+		if((num[i][0]*num[i][1])%num[i][2]==24||num[i][0]*(num[i][1]%num[i][2])==24){
+			flag=1;
+		}
+		if((num[i][0]/num[i][1])+num[i][2]==24||num[i][0]/(num[i][1]+num[i][2])==24){
+			flag=1;
+		}
+		if((num[i][0]/num[i][1])-num[i][2]==24||num[i][0]/(num[i][1]-num[i][2])==24){
+			flag=1;
+		}
+		if((num[i][0]/num[i][1])*num[i][2]==24||num[i][0]/(num[i][1]*num[i][2])==24){
+			flag=1;
+		}
+		if(num[i][1]/num[i][2]!=0){//防止除数为0
+			if(num[i][0]/(num[i][1]/num[i][2])==24){
+				flag=1;
+			}
+		}
+		if((num[i][0]/num[i][1])/num[i][2]==24){
+			flag=1;
+		}
+		if((num[i][0]/num[i][1])%num[i][2]==24||num[i][0]/(num[i][1]%num[i][2])==24){
+			flag=1;
+		}
+		if((num[i][0]%num[i][1])+num[i][2]==24||num[i][0]%(num[i][1]+num[i][2])==24){
+			flag=1;
+		}
+		if((num[i][0]%num[i][1])-num[i][2]==24||num[i][0]%(num[i][1]-num[i][2])==24){
+			flag=1;
+		}
+		if((num[i][0]%num[i][1])*num[i][2]==24||num[i][0]%(num[i][1]*num[i][2])==24){
+			flag=1;
+		}
+		if(num[i][1]/num[i][2]!=0){//防止除数为0 
+			if(num[i][0]%(num[i][1]/num[i][2])==24){
+				flag=1;
+			}
+		}
+		if((num[i][0]%num[i][1])/num[i][2]==24){
+			flag=1;
+		}
+		if((num[i][0]%num[i][1])%num[i][2]==24||num[i][0]%(num[i][1]%num[i][2])==24){
+			flag=1;
+		}
+		if(flag==1){ 
+			printf("YES\n");
+		}else{//flag为0时表示上述的所以组合没有等于24的 
+			printf("NO\n");
+		}
+	}
+	return 0;
+}

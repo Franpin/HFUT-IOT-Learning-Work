@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2015.2 (64-bit)
+# SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+# IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
+# Start of session at: Fri Jan 05 09:22:08 2018
+# Process ID: 12784
+# Log file: C:/Xilinx/VivadoProject/MulCPU/MulCPU.sim/sim_1/behav/webtalk.log
+# Journal file: C:/Xilinx/VivadoProject/MulCPU/MulCPU.sim/sim_1/behav\webtalk.jou
+#-----------------------------------------------------------
+source C:/Xilinx/VivadoProject/MulCPU/MulCPU.sim/sim_1/behav/xsim.dir/cpu_sim_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] 'C:/Xilinx/VivadoProject/MulCPU/MulCPU.sim/sim_1/behav/xsim.dir/cpu_sim_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Fri Jan 05 09:22:12 2018. For additional details about this file, please refer to the WebTalk help file at D:/Vivado/2015.2/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Fri Jan 05 09:22:12 2018...

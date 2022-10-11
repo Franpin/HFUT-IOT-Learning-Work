@@ -1,0 +1,46 @@
+Removed Pin From Net: NetName=VEE Pin=C7-1
+Removed Pin From Net: NetName=VEE Pin=U3-5
+Change Component Designator: OldDesignator=R1 NewDesignator=Rf2
+Change Component Designator: OldDesignator=R3 NewDesignator=R4
+Change Component Designator: OldDesignator=R4 NewDesignator=R6
+Change Component Designator: OldDesignator=R5 NewDesignator=R
+Change Component Designator: OldDesignator=R6 NewDesignator=Rf1
+Change Component Designator: OldDesignator=R7 NewDesignator=R5
+Change Component Designator: OldDesignator=R8 NewDesignator=R7
+Change Component Designator: OldDesignator=R9 NewDesignator=R1
+Change Component Designator: OldDesignator=R10 NewDesignator=R3
+Change Net Name : Old Net Name=NetR1_1 New Net Name=NetRf2_1
+Change Net Name : Old Net Name=NetR1_2 New Net Name=NetR6_2
+Change Net Name : Old Net Name=NetR3_1 New Net Name=NetR4_1
+Change Net Name : Old Net Name=NetR6_1 New Net Name=NetR1_2
+Change Net Name : Old Net Name=NetR8_2 New Net Name=NetR7_2
+Change Net Name : Old Net Name=NetR9_1 New Net Name=NetR1_1
+Change Net Name : Old Net Name=NetR10_2 New Net Name=NetR3_2
+Added Pin To Net: NetName=NetC7_1 Pin=C7-1
+Added Pin To Net: NetName=NetC7_1 Pin=U3-5
+Added Net: Name=NetC7_1
+Added Member To Class: ClassName=Sheet1 Member=Component C1 Cap
+Added Member To Class: ClassName=Sheet1 Member=Component C2 Cap
+Added Member To Class: ClassName=Sheet1 Member=Component C3 Cap
+Added Member To Class: ClassName=Sheet1 Member=Component C4 Cap
+Added Member To Class: ClassName=Sheet1 Member=Component C5 Cap
+Added Member To Class: ClassName=Sheet1 Member=Component C6 Cap
+Added Member To Class: ClassName=Sheet1 Member=Component C7 Cap
+Added Member To Class: ClassName=Sheet1 Member=Component P1 Header 2
+Added Member To Class: ClassName=Sheet1 Member=Component R1 Res2
+Added Member To Class: ClassName=Sheet1 Member=Component R2 Res2
+Added Member To Class: ClassName=Sheet1 Member=Component R3 Res2
+Added Member To Class: ClassName=Sheet1 Member=Component R4 Res2
+Added Member To Class: ClassName=Sheet1 Member=Component R5 Res2
+Added Member To Class: ClassName=Sheet1 Member=Component R6 Res2
+Added Member To Class: ClassName=Sheet1 Member=Component R7 Res2
+Added Member To Class: ClassName=Sheet1 Member=Component R11 Res2
+Added Member To Class: ClassName=Sheet1 Member=Component Rf1 Res2
+Added Member To Class: ClassName=Sheet1 Member=Component Rf2 Res2
+Added Member To Class: ClassName=Sheet1 Member=Component R Res Adj2
+Added Member To Class: ClassName=Sheet1 Member=Component U1 LM124J
+Added Member To Class: ClassName=Sheet1 Member=Component U2 LM741H
+Added Member To Class: ClassName=Sheet1 Member=Component U3 Component_1
+Added Member To Class: ClassName=Sheet1 Member=Component Vo Header 2
+Added Member To Class: ClassName=Sheet1 Member=Component Vs CON1
+Added Room: Name=Sheet1

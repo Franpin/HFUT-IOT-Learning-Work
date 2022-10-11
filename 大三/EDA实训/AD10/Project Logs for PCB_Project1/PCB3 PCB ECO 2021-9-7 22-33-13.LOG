@@ -1,0 +1,6 @@
+Added Component: Designator=C7(RAD-0.3)
+Added Pin To Net: NetName=VCC Pin=C7-2
+Added Pin To Net: NetName=NetC7_1 Pin=C7-1
+Added Pin To Net: NetName=NetC7_1 Pin=C7-2
+Added Pin To Net: NetName=NetC7_1 Pin=U3-4
+Added Net: Name=NetC7_1

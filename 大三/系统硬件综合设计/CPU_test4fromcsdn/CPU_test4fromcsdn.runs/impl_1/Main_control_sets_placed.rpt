@@ -1,0 +1,178 @@
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Thu Dec 23 19:30:56 2021
+| Host         : DESKTOP-JTN8P9I running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file Main_control_sets_placed.rpt
+| Design       : Main
+| Device       : xc7a35t
+------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |   100 |
+|    Minimum number of control sets                        |   100 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |     2 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |   100 |
+| >= 0 to < 4        |     0 |
+| >= 4 to < 6        |     0 |
+| >= 6 to < 8        |     0 |
+| >= 8 to < 10       |    64 |
+| >= 10 to < 12      |     0 |
+| >= 12 to < 14      |     0 |
+| >= 14 to < 16      |     0 |
+| >= 16              |    36 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |            1734 |          956 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |               0 |            0 |
+| Yes          | No                    | No                     |              72 |           33 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |               0 |            0 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++---------------------------------------------+-----------------------------+------------------+------------------+----------------+
+|                 Clock Signal                |        Enable Signal        | Set/Reset Signal | Slice Load Count | Bel Load Count |
++---------------------------------------------+-----------------------------+------------------+------------------+----------------+
+|  ControlUnit/DFlipFlop/o_state_reg[2]_10[0] |                             |                  |                6 |              8 |
+|  ControlUnit/DFlipFlop/o_state_reg[2]_15[0] |                             |                  |                7 |              8 |
+|  ControlUnit/DFlipFlop/o_state_reg[2]_11[0] |                             |                  |                4 |              8 |
+|  ControlUnit/DFlipFlop/o_state_reg[2]_14[0] |                             |                  |                4 |              8 |
+|  ControlUnit/DFlipFlop/o_state_reg[2]_16[0] |                             |                  |                7 |              8 |
+|  ControlUnit/DFlipFlop/o_state_reg[2]_17[0] |                             |                  |                6 |              8 |
+|  ControlUnit/DFlipFlop/o_state_reg[2]_3[0]  |                             |                  |                6 |              8 |
+|  ControlUnit/DFlipFlop/o_state_reg[2]_4[0]  |                             |                  |                5 |              8 |
+|  ControlUnit/DFlipFlop/o_state_reg[2]_9[0]  |                             |                  |                3 |              8 |
+|  ControlUnit/DFlipFlop/o_state_reg[2]_7[0]  |                             |                  |                4 |              8 |
+|  ControlUnit/DFlipFlop/o_state_reg[2]_6[0]  |                             |                  |                5 |              8 |
+|  ControlUnit/DFlipFlop/o_state_reg[2]_8[0]  |                             |                  |                5 |              8 |
+|  ALUoutDR/o_data_reg[0]_9[0]                |                             |                  |                5 |              8 |
+|  ALUoutDR/E[0]                              |                             |                  |                5 |              8 |
+|  ALUoutDR/o_data_reg[0]_1[0]                |                             |                  |                4 |              8 |
+|  ALUoutDR/o_data_reg[0]_0[0]                |                             |                  |                5 |              8 |
+|  ALUoutDR/o_data_reg[0]_12[0]               |                             |                  |                5 |              8 |
+|  ALUoutDR/o_data_reg[0]_13[0]               |                             |                  |                4 |              8 |
+|  ALUoutDR/o_data_reg[0]_10[0]               |                             |                  |                4 |              8 |
+|  ALUoutDR/o_data_reg[0]_11[0]               |                             |                  |                3 |              8 |
+|  ALUoutDR/o_data_reg[0]_14[0]               |                             |                  |                4 |              8 |
+|  ALUoutDR/o_data_reg[0]_4[0]                |                             |                  |                4 |              8 |
+|  ALUoutDR/o_data_reg[1]_2[0]                |                             |                  |                7 |              8 |
+|  ControlUnit/DFlipFlop/o_state_reg[2]_5[0]  |                             |                  |                5 |              8 |
+|  ALUoutDR/o_data_reg[1]_7[0]                |                             |                  |                7 |              8 |
+|  ControlUnit/DFlipFlop/o_state_reg[2]_1[0]  |                             |                  |                5 |              8 |
+|  ControlUnit/DFlipFlop/o_state_reg[2]_12[0] |                             |                  |                6 |              8 |
+|  ControlUnit/DFlipFlop/o_state_reg[2]_13[0] |                             |                  |                5 |              8 |
+|  ALUoutDR/o_data_reg[1]_18[0]               |                             |                  |                5 |              8 |
+|  ALUoutDR/o_data_reg[1]_5[0]                |                             |                  |                8 |              8 |
+|  ALUoutDR/o_data_reg[0]_5[0]                |                             |                  |                6 |              8 |
+|  ALUoutDR/o_data_reg[0]_6[0]                |                             |                  |                6 |              8 |
+|  ALUoutDR/o_data_reg[0]_2[0]                |                             |                  |                5 |              8 |
+|  ALUoutDR/o_data_reg[0]_3[0]                |                             |                  |                4 |              8 |
+|  ALUoutDR/o_data_reg[0]_15[0]               |                             |                  |                8 |              8 |
+|  ALUoutDR/o_data_reg[1]_9[0]                |                             |                  |                6 |              8 |
+|  ALUoutDR/o_data_reg[1]_10[0]               |                             |                  |                7 |              8 |
+|  ALUoutDR/o_data_reg[1]_16[0]               |                             |                  |                7 |              8 |
+|  ALUoutDR/o_data_reg[1]_3[0]                |                             |                  |                5 |              8 |
+|  ALUoutDR/o_data_reg[1]_8[0]                |                             |                  |                6 |              8 |
+|  ALUoutDR/o_data_reg[0]_8[0]                |                             |                  |                8 |              8 |
+|  ALUoutDR/o_data_reg[1]_19[0]               |                             |                  |                7 |              8 |
+|  ALUoutDR/o_data_reg[1]_6[0]                |                             |                  |                5 |              8 |
+|  ALUoutDR/o_data_reg[1]_17[0]               |                             |                  |                6 |              8 |
+|  ALUoutDR/o_data_reg[1]_11[0]               |                             |                  |                6 |              8 |
+|  ALUoutDR/o_data_reg[1]_13[0]               |                             |                  |                5 |              8 |
+|  ALUoutDR/o_data_reg[0]_7[0]                |                             |                  |                5 |              8 |
+|  ALUoutDR/o_data_reg[1]_4[0]                |                             |                  |                4 |              8 |
+|  ALUoutDR/o_data_reg[1]_0[0]                |                             |                  |                6 |              8 |
+|  ALUoutDR/o_data_reg[1]_12[0]               |                             |                  |                4 |              8 |
+|  ALUoutDR/o_data_reg[1]_14[0]               |                             |                  |                8 |              8 |
+|  ALUoutDR/o_data_reg[1]_1[0]                |                             |                  |                6 |              8 |
+|  ALUoutDR/o_data_reg[1]_15[0]               |                             |                  |                6 |              8 |
+|  ALUoutDR/o_data_reg[3]_2[0]                |                             |                  |                3 |              8 |
+|  ALUoutDR/o_data_reg[4]_2[0]                |                             |                  |                6 |              8 |
+|  ALUoutDR/o_data_reg[4]_10[0]               |                             |                  |                6 |              8 |
+|  ALUoutDR/o_data_reg[4]_12[0]               |                             |                  |                6 |              8 |
+|  ALUoutDR/o_data_reg[4]_11[0]               |                             |                  |                6 |              8 |
+|  ALUoutDR/o_data_reg[4]_5[0]                |                             |                  |                8 |              8 |
+|  ALUoutDR/o_data_reg[4]_3[0]                |                             |                  |                5 |              8 |
+|  ALUoutDR/o_data_reg[4]_4[0]                |                             |                  |                5 |              8 |
+|  ALUoutDR/o_state_reg[2][0]                 |                             |                  |                4 |              8 |
+|  ALUoutDR/o_data_reg[4]_6[0]                |                             |                  |                4 |              8 |
+|  ALUoutDR/o_state_reg[2]_0[0]               |                             |                  |                3 |              8 |
+|  IR/o_data_reg[26]_2[0]                     |                             |                  |               12 |             32 |
+|  IR/o_data_reg[26]_7[0]                     |                             |                  |               15 |             32 |
+|  IR/o_data_reg[26]_6[0]                     |                             |                  |               13 |             32 |
+|  IR/o_data_reg[26]_0[0]                     |                             |                  |               13 |             32 |
+|  IR/o_data_reg[26]_1[0]                     |                             |                  |               15 |             32 |
+|  IR/o_data_reg[26]_3[0]                     |                             |                  |               16 |             32 |
+|  IR/o_data_reg[26]_17[0]                    |                             |                  |               16 |             32 |
+|  ControlUnit/DFlipFlop/E[0]                 |                             |                  |               18 |             32 |
+|  IR/o_data_reg[26]_8[0]                     |                             |                  |               15 |             32 |
+|  IR/E[0]                                    |                             |                  |               16 |             32 |
+|  IR/o_data_reg[26]_11[0]                    |                             |                  |               19 |             32 |
+|  IR/o_data_reg[26]_14[0]                    |                             |                  |               13 |             32 |
+|  IR/o_data_reg[26]_20[0]                    |                             |                  |               21 |             32 |
+|  IR/o_data_reg[26]_4[0]                     |                             |                  |               14 |             32 |
+|  IR/o_data_reg[26]_19[0]                    |                             |                  |               21 |             32 |
+|  IR/o_data_reg[26]_16[0]                    |                             |                  |               12 |             32 |
+|  IR/o_data_reg[26]_5[0]                     |                             |                  |               12 |             32 |
+|  IR/o_data_reg[26]_12[0]                    |                             |                  |               19 |             32 |
+|  IR/o_data_reg[26]_15[0]                    |                             |                  |               17 |             32 |
+|  IR/o_data_reg[26]_10[0]                    |                             |                  |               14 |             32 |
+|  IR/o_data_reg[26]_13[0]                    |                             |                  |               15 |             32 |
+|  IR/o_data_reg[26]_9[0]                     |                             |                  |               16 |             32 |
+|  IR/o_data_reg[26]_18[0]                    |                             |                  |               13 |             32 |
+|  n_5_1791_BUFG                              |                             |                  |               17 |             32 |
+|  n_2_1788_BUFG                              |                             |                  |               14 |             32 |
+| ~n_0_3297_BUFG                              |                             |                  |               15 |             32 |
+|  n_3_1789_BUFG                              |                             |                  |               18 |             32 |
+|  n_10_1796_BUFG                             |                             |                  |               18 |             32 |
+|  n_1_1787_BUFG                              |                             |                  |               18 |             32 |
+|  n_6_1792_BUFG                              |                             |                  |               22 |             32 |
+|  n_9_1795_BUFG                              |                             |                  |               20 |             32 |
+|  n_7_1793_BUFG                              |                             |                  |               22 |             32 |
+|  n_8_1794_BUFG                              |                             |                  |               21 |             32 |
+|  n_4_1790_BUFG                              |                             |                  |               19 |             32 |
+| ~CLK_IBUF_BUFG                              | ControlUnit/DFlipFlop/IRWre |                  |               33 |             72 |
+|  CLK_IBUF_BUFG                              |                             |                  |               52 |            134 |
++---------------------------------------------+-----------------------------+------------------+------------------+----------------+
+
+

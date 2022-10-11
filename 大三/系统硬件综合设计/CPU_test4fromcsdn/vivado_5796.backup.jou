@@ -1,0 +1,23 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Sun Dec 26 19:33:50 2021
+# Process ID: 5796
+# Current directory: D:/桌面/CPU_test4fromcsdn
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent9832 D:\桌面\CPU_test4fromcsdn\CPU_test4fromcsdn.xpr
+# Log file: D:/桌面/CPU_test4fromcsdn/vivado.log
+# Journal file: D:/桌面/CPU_test4fromcsdn\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/桌面/CPU_test4fromcsdn/CPU_test4fromcsdn.xpr
+update_compile_order -fileset sources_1
+close_project
+create_project project_1 D:/Vivado2019/project_1 -part xc7vx485tffg1157-1
+file mkdir D:/Vivado2019/project_1/project_1.srcs/sources_1/new
+close [ open D:/Vivado2019/project_1/project_1.srcs/sources_1/new/hello.v w ]
+add_files D:/Vivado2019/project_1/project_1.srcs/sources_1/new/hello.v
+update_compile_order -fileset sources_1
+close_project
+open_project D:/桌面/CPU_test4fromcsdn/CPU_test4fromcsdn.xpr
+update_compile_order -fileset sources_1

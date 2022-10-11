@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+     <title>机房管理系统</title>
+
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+     <meta name="description" content="">
+     <meta name="keywords" content="">
+     <meta name="author" content="">
+     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+     <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+     <link rel="stylesheet" href="../static/css/magnific-popup.css">
+     <link rel="stylesheet" href="../static/css/font-awesome.min.css">
+
+     <!-- MAIN CSS -->
+     <link rel="stylesheet" href="../static/css/templatemo-style.css">
+     
+</head>
+<body>
+     <!-- <section class="preloader">
+          <div class="spinner">
+               <span class="spinner-rotate"></span>
+          </div>
+     </section> -->
+
+
+     <!-- MENU -->
+     <section class="navbar custom-navbar navbar-fixed-top" role="navigation">
+          <div class="container">
+
+               <div class="navbar-header">
+                    <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                         <span class="icon icon-bar"></span>
+                         <span class="icon icon-bar"></span>
+                         <span class="icon icon-bar"></span>
+                    </button>
+
+                      
+                    <a href="index.html" class="navbar-brand">Hydro</a>
+               </div>
+
+               <!-- MENU LINKS -->
+               <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav navbar-nav-first">
+                         <li><a href="/index#home" class="smoothScroll">Home</a></li>
+                         <li><a href="/index#contact" class="smoothScroll">充值</a></li>
+                         <li><a href="/index#pre" class="smoothScroll">预约统计</a></li>
+                         <li><a href="/index#stu_manage" class="smoothScroll">学生管理</a></li>
+                         <li><a href="/index#class_manage" class="smoothScroll">班级管理</a></li>
+                         <li><a href="/index#com_sta" class="smoothScroll">上机统计</a></li>
+                         <li><a href="/index#free" class="smoothScroll">机房空闲情况及预约页面</a></li>
+                         <li><a href="/index#room_manage" class="smoothScroll">机房管理页面</a></li>
+                         <li><a href="/index#security" class="smoothScroll">备份和恢复</a></li>
+                    </ul>
+
+
+               </div>
+
+          </div>
+     </section>
+     <section id="home" data-stellar-background-ratio="0.5">
+          <div class="overlay"></div>
+          <div class="container">
+               <div class="row">
+                    <div class="col-md-3 col-sm-6">
+                         <div class="about-info skill-thumb">
+                              <textarea style="border:0;border-radius:5px;background-color:rgba(241,241,241,.98);width: 400px;height: 300px;padding: 10px;resize: none;" 
+                              placeholder="询价备注（尺寸、材质等）">{% for message in get_flashed_messages() %}
+{{ message }}{% endfor %}</textarea>                           
+                              
+                         </div>
+                    </div>
+
+                    <div class="col-md-6 col-sm-12">
+                         <div class="home-video">
+                              <div class="embed-responsive embed-responsive-16by9">
+                                   <!-- <iframe src="https://www.youtube.com/embed/AqcjdkPMPJA" frameborder="0" allowfullscreen></iframe> -->
+                              </div>
+                         </div>
+                    </div>
+                    
+               </div>
+          </div>
+     </section>
+
+</body>
+</html>

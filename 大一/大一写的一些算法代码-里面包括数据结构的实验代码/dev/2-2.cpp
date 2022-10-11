@@ -1,0 +1,89 @@
+#include<stdio.h>
+int main(){
+	int n;
+	int num[1000][3];
+	scanf("%d",&n);
+	for(int i=0;i<n;i++){
+		scanf("%d %d %d",&num[i][0],&num[i][1],&num[i][2]);//输入数据 
+	}
+	for(int i=0;i<n;i++){//穷举法，从每组中的符号组合中找到最大的那个值 
+		int max=0;
+		if((num[i][0]+num[i][1])+num[i][2]>max){
+			max=(num[i][0]+num[i][1])+num[i][2];
+		}
+		if((num[i][0]+num[i][1])-num[i][2]>max){
+			max=(num[i][0]+num[i][1])-num[i][2];
+		}
+		if((num[i][0]+num[i][1])*num[i][2]>max){
+			max=(num[i][0]+num[i][1])*num[i][2];
+		}
+		if((num[i][0]+num[i][1])/num[i][2]>max){
+			max=(num[i][0]+num[i][1])/num[i][2];
+		}
+		if((num[i][0]+num[i][1])%num[i][2]>max){
+			max=(num[i][0]+num[i][1])%num[i][2];
+		}
+		if((num[i][0]-num[i][1])+num[i][2]>max){
+			max=(num[i][0]-num[i][1])+num[i][2];
+		}
+		if((num[i][0]-num[i][1])-num[i][2]>max){
+			max=(num[i][0]-num[i][1])-num[i][2];
+		}
+		if((num[i][0]-num[i][1])*num[i][2]>max){
+			max=(num[i][0]-num[i][1])*num[i][2];
+		}
+		if((num[i][0]-num[i][1])/num[i][2]>max){
+			max=(num[i][0]-num[i][1])/num[i][2];
+		}
+		if((num[i][0]-num[i][1])%num[i][2]>max){
+			max=(num[i][0]-num[i][1])%num[i][2];
+		}
+		if((num[i][0]*num[i][1])+num[i][2]>max){
+			max=(num[i][0]*num[i][1])+num[i][2];
+		}
+		if((num[i][0]*num[i][1])-num[i][2]>max){
+			max=(num[i][0]*num[i][1])-num[i][2];
+		}
+		if((num[i][0]*num[i][1])*num[i][2]>max){
+			max=(num[i][0]*num[i][1])*num[i][2];
+		}
+		if((num[i][0]*num[i][1])/num[i][2]>max){
+			max=(num[i][0]*num[i][1])/num[i][2];
+		}
+		if((num[i][0]*num[i][1])%num[i][2]>max){
+			max=(num[i][0]*num[i][1])%num[i][2];
+		}
+		if((num[i][0]/num[i][1])+num[i][2]>max){
+			max=(num[i][0]/num[i][1])+num[i][2];
+		}
+		if((num[i][0]/num[i][1])-num[i][2]>max){
+			max=(num[i][0]/num[i][1])-num[i][2];
+		}
+		if((num[i][0]/num[i][1])*num[i][2]>max){
+			max=(num[i][0]/num[i][1])*num[i][2];
+		}
+		if((num[i][0]/num[i][1])/num[i][2]>max){
+			max=(num[i][0]/num[i][1])/num[i][2];
+		}
+		if((num[i][0]/num[i][1])%num[i][2]>max){
+			max=(num[i][0]/num[i][1])%num[i][2];
+		}
+		if((num[i][0]%num[i][1])+num[i][2]>max){
+			max=(num[i][0]%num[i][1])+num[i][2];
+		}
+		if((num[i][0]%num[i][1])-num[i][2]>max){
+			max=(num[i][0]%num[i][1])-num[i][2];
+		}
+		if((num[i][0]%num[i][1])*num[i][2]>max){
+			max=(num[i][0]%num[i][1])*num[i][2];
+		}
+		if((num[i][0]%num[i][1])/num[i][2]>max){
+			max=(num[i][0]%num[i][1])/num[i][2];
+		}
+		if((num[i][0]%num[i][1])%num[i][2]>max){
+			max=(num[i][0]%num[i][1])%num[i][2];
+		}
+		printf("%d\n",max);
+	}
+	return 0;
+} 

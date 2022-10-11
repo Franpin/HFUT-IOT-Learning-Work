@@ -1,0 +1,3 @@
+Change Component DesignItemId : Designator=U2 Old DesignItemId=LM741J New DesignItemId=LM741H
+Change Component Footprint: Designator=U2 Old Footprint=J08A New Footprint=H08C
+Change Component Comment : Designator=U2 Old Comment=LM741J New Comment=LM741H

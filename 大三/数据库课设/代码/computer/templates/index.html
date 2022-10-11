@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+     <title>机房管理系统</title>
+
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+     <meta name="description" content="">
+     <meta name="keywords" content="">
+     <meta name="author" content="">
+     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+     <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+     <link rel="stylesheet" href="../static/css/magnific-popup.css">
+     <link rel="stylesheet" href="../static/css/font-awesome.min.css">
+
+     <!-- MAIN CSS -->
+     <link rel="stylesheet" href="../static/css/templatemo-style.css">
+</head>
+<body>
+
+     <!-- PRE LOADER -->
+     <section class="preloader">
+          <div class="spinner">
+               <span class="spinner-rotate"></span>
+          </div>
+     </section>
+
+
+     <!-- MENU -->
+     <section class="navbar custom-navbar navbar-fixed-top" role="navigation">
+          <div class="container">
+
+               <div class="navbar-header">
+                    <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                         <span class="icon icon-bar"></span>
+                         <span class="icon icon-bar"></span>
+                         <span class="icon icon-bar"></span>
+                    </button>
+
+                    <!-- lOGO TEXT HERE -->
+                    <a href="index.html" class="navbar-brand">Hydro</a>
+               </div>
+
+               <!-- MENU LINKS -->
+               <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav navbar-nav-first">
+                         <li><a href="#home" class="smoothScroll">Home</a></li>
+                         <li><a href="#contact" class="smoothScroll">充值</a></li>
+                         <li><a href="#pre" class="smoothScroll">班级预约统计</a></li>
+                         <li><a href="#stu_manage" class="smoothScroll">学生管理</a></li>
+                         <li><a href="#class_manage" class="smoothScroll">班级管理</a></li>
+                         <li><a href="#com_sta" class="smoothScroll">个人预约统计</a></li>
+                         <li><a href="#free" class="smoothScroll">机房空闲情况及预约页面</a></li>
+                         <li><a href="#room_manage" class="smoothScroll">机房管理页面</a></li>
+                         <li><a href="#security" class="smoothScroll">备份和恢复</a></li>
+                    </ul>
+
+                    <!-- <ul class="nav navbar-nav navbar-right">
+                         <li><a href="#"><i class="fa fa-facebook-square"></i></a></li>
+                         <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                         <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                         <li class="section-btn"><a href="#" data-toggle="modal" data-target="#modal-form">Sign in / Join</a></li>
+                    </ul> -->
+
+               </div>
+
+          </div>
+     </section>
+
+
+     <!-- HOME -->
+     <section id="home" data-stellar-background-ratio="0.5">
+          <div class="overlay"></div>
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-md-6 col-sm-12">
+                         <div class="home-info">
+                              <h1>机房管理系统</h1>
+                              <a href="#contact" class="btn section-btn smoothScroll">开始</a>
+                              <span>
+                                   数据库课程设计
+                                   <br>
+                                   <br>设计成员：付炎平、胡旭耀、张梦娇
+                              </span>
+                         </div>
+                    </div>
+
+                    <div class="col-md-6 col-sm-12">
+                         <div class="home-video">
+                              <div class="embed-responsive embed-responsive-16by9">
+                                   <!-- <iframe src="https://www.youtube.com/embed/AqcjdkPMPJA" frameborder="0" allowfullscreen></iframe> -->
+                              </div>
+                         </div>
+                    </div>
+                    
+               </div>
+          </div>
+     </section>
+
+
+     <!-- ABOUT -->
+     <!-- CONTACT -->
+ 
+     <!-- CONTACT -->
+     <section id="contact" data-stellar-background-ratio="0.5">
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-md-12 col-sm-12">
+                         <div class="section-title">
+                              <h2>学生充值</h2>
+                              <span class="line-bar">...</span>
+                         </div>
+                    </div>
+
+                    <div class="col-md-8 col-sm-8">
+                        
+                         <!-- CONTACT FORM HERE -->
+                         <form id="contact-form" role="form" action="/index1_result" method="post">
+                              <div class="col-md-6 col-sm-6">
+                                   <input name="input_id" type="text" class="form-control" placeholder="学生id" id="cf-name" required="">
+                              </div>
+                              <div class="col-md-6 col-sm-6">
+                                   <select name="input_price" class="form-control" id="cf-budgets" name="cf-budgets">
+                                        <option>充值金额</option>
+                                        <option>100</option>
+                                        <option>200</option>
+                                        <option>300</option>
+                                        <option>400</option>
+                                        <option>500</option>
+                                   </select>
+                              </div>
+                              <div class="col-md-4 col-sm-12">
+                                   <input type="submit" class="form-control" name="submit" value="开始充值">
+                              </div>
+                         </form>
+                    </div>
+                    <div class="col-md-8 col-sm-8">
+                         <form id="contact-form" role="form" action="/index1_result" method="post">
+                              <div class="col-md-6 col-sm-6">
+                                   <input name="input_id" type="text" class="form-control" placeholder="学生id" id="cf-name" required="">
+                              </div>
+
+                              <div class="col-md-4 col-sm-12">
+                                   <input type="submit" class="form-control" name="submit" value="查看该学生余额">
+                              </div>
+                             
+                         </form>
+                         <form id="contact-form" role="form" action="/index1_result" method="post">     
+                              <div class="col-md-4 col-sm-12">
+                                   <input type="submit" class="form-control" name="submit" value="查看全体学生余额">
+                              </div>
+
+                         </form>
+                    </div>
+
+
+                    <div class="col-md-4 col-sm-4">
+                         <div class="google-map">
+	<!-- How to change your own map point
+            1. Go to Google Maps
+            2. Click on your location point
+            3. Click "Share" and choose "Embed map" tab
+            4. Copy only URL and paste it within the src="" field below
+	-->
+                              <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3647.3030413476204!2d100.5641230193719!3d13.757206847615207!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xf51ce6427b7918fc!2sG+Tower!5e0!3m2!1sen!2sth!4v1510722015945" allowfullscreen></iframe> -->
+                         </div>
+                    </div>
+
+               </div>
+          </div>
+     </section>
+
+     <section id="pre" data-stellar-background-ratio="0.5">
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-md-12 col-sm-12">
+                         <div class="section-title">
+                              <h2>班级预约</h2>
+                              <span class="line-bar">...</span>
+                         </div>
+                    </div>
+
+                    <div class="col-md-6 col-sm-6">
+                         <!-- BLOG THUMB -->
+                         <div class="media blog-thumb">
+                              <form id="contact-form" role="form" action="/index2_result" method="post">
+                                   <div class="media-object media-left">
+                                        <img src="../static/images/blog-image1.jpg" class="img-responsive" alt=""></a>
+                                   </div>
+                                   <div class="media-body blog-info">
+                                        <small><i class="fa fa-clock-o"></i> Read One</small>
+                                        <h3>查看全部的班级预约</a></h3>
+                                        <input type="submit" class="btn section-btn" name="submit0" value="查看">
+                                   </div>
+                              </form>  
+                         </div>
+                    </div>
+
+                    <div class="col-md-6 col-sm-6">
+                         <!-- BLOG THUMB -->
+                         <div class="media blog-thumb">
+
+                              <form id="contact-form" role="form" action="/index2_result" method="post">
+                                   <div class="media-object media-left">
+                                        <img src="../static/images/work-image2.jpg" class="img-responsive" alt=""></a>
+                                   </div>
+                                   
+                                   <div class="media-body blog-info">
+                                        <small><i class="fa fa-clock-o"></i> Read Two</small>
+                                        <!-- <h3><a href="index2_2.html">查看个人预约</a></h3> -->
+                                        <div class="col-md-6 col-sm-6">
+                                        <input type="text" name ='input_id' class="form-control" placeholder="班级id" id="cf-name" name="cf-name" required="">
+                                        </div> 
+                                        <br>
+                                        <input type="submit" class="btn section-btn" name="submit1" value="查看某个班级的预约">
+                                   </div>
+     
+                              </form>
+                         </div>
+                    </div>
+
+                    <div class="col-md-6 col-sm-6">
+                         <!-- BLOG THUMB -->
+                         <div class="media blog-thumb">
+
+                              <form id="contact-form" role="form" action="/index2_result" method="post">
+                                   <div class="media-object media-left">
+                                        <img src="../static/images/work-image3.jpg" class="img-responsive" alt=""></a>
+                                   </div>
+                                   
+                                   <div class="media-body blog-info">
+                                        <small><i class="fa fa-clock-o"></i> Read Three</small>
+                                        <!-- <h3><a href="index2_2.html">查看个人预约</a></h3> -->
+                                        <div class="col-md-6 col-sm-6">
+                                        <input type="text" name ='input_id' class="form-control" placeholder="班级预约id" id="cf-name" name="cf-name" required="">
+                                        </div> 
+                                        <br>
+                                        <input type="submit" class="btn section-btn" name="submit2" value="删除某个班级的预约">
+                                   </div>
+     
+                              </form>
+                         </div>
+                    </div>
+
+                    <div class="col-md-6 col-sm-6">
+                         <!-- BLOG THUMB -->
+                         <div class="media blog-thumb">
+
+                              <form id="contact-form" role="form" action="/index2_result" method="post">
+                                   <div class="media-object media-left">
+                                        <img src="../static/images/work-image4.jpg" class="img-responsive" alt=""></a>
+                                   </div>
+                                   
+                                   <div class="media-body blog-info">
+                                        <small><i class="fa fa-clock-o"></i> Read Four</small>
+                                        <!-- <h3><a href="index2_2.html">查看个人预约</a></h3> -->
+                                        <div class="col-md-6 col-sm-6">
+                                        <input type="text" name ='input_id' class="form-control" placeholder="班级预约id" id="cf-name" name="cf-name" required="">
+                                        </div> 
+                                        <br>
+                                        <input type="submit" class="btn section-btn" name="submit3" value="某个班级完成预约">
+                                   </div>
+     
+                              </form>
+                         </div>
+                    </div>
+                    
+               </div>
+          </div>
+     </section>
+
+     <section id="stu_manage" data-stellar-background-ratio="0.5">
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-md-12 col-sm-12">
+                         <div class="section-title">
+                              <h2>学生管理</h2>
+                              <span class="line-bar">...</span>
+                         </div>
+                    </div>
+
+                    <div class="col-md-6 col-sm-6">
+                         <!-- BLOG THUMB -->
+                         <div class="media blog-thumb">
+                              <form id="contact-form" role="form" action="/index3_result" method="post">
+                                   <div class="media-object media-left">
+                                        <img src="../static/images/blog-image1.jpg" class="img-responsive" alt=""></a>
+                                   </div>
+                                   <div class="media-body blog-info">
+                                        <small><i class="fa fa-clock-o"></i> Read One</small>
+                                        <h3>查看全部的学生信息</a></h3>
+                                        <input type="submit" class="btn section-btn" name="submit0" value="查看">
+                                   </div>
+                              </form>
+                         </div>
+                    </div>
+
+                    <div class="col-md-6 col-sm-6">
+                         <!-- BLOG THUMB -->
+                         <div class="media blog-thumb">
+
+                              <form id="contact-form" role="form" action="/index3_result" method="post">
+                                   <div class="media-object media-left">
+                                        <img src="../static/images/work-image2.jpg" class="img-responsive" alt=""></a>
+                                   </div>
+                                   
+                                   <div class="media-body blog-info">
+                                        <small><i class="fa fa-clock-o"></i> Read Two</small>
+                                        <!-- <h3><a href="index2_2.html">查看个人预约</a></h3> -->
+                                        <div class="col-md-6 col-sm-6">
+                                        <input type="text" name ='input_id' class="form-control" placeholder="学生id" id="cf-name" name="cf-name" required="">
+                                        </div> 
+                                        <br>
+                                        <input type="submit" class="btn section-btn" name="submit1" value="查看某个学生的信息">
+                                   </div>
+     
+                              </form>
+                         </div>
+                    </div>
+
+                    <div class="col-md-6 col-sm-6">
+                         <!-- BLOG THUMB -->
+                         <div class="media blog-thumb">
+
+                              <form id="contact-form" role="form" action="/index3_result" method="post">
+                                   <div class="media-object media-left">
+                                        <img src="../static/images/work-image3.jpg" class="img-responsive" alt=""></a>
+                                   </div>
+                                   
+                                   <div class="media-body blog-info">
+                                        <small><i class="fa fa-clock-o"></i> Read Three</small>
+                                        <!-- <h3><a href="index2_2.html">查看个人预约</a></h3> -->
+                                        <div class="col-md-6 col-sm-6">
+                                        <input type="text" name ='input_id' class="form-control" placeholder="学生id" id="cf-name" name="cf-name" required="">
+                                        </div> 
+                                        <br>
+                                        <input type="submit" class="btn section-btn" name="submit2" value="删除某学生的信息">
+                                   </div>
+     
+                              </form>
+                         </div>
+                    </div>
+
+                    <div class="col-md-6 col-sm-6">
+                         <!-- BLOG THUMB -->
+                         <div class="media blog-thumb">
+
+                              <form id="contact-form" role="form" action="/index3_result" method="post">
+                                   <div class="media-object media-left">
+                                        <img src="../static/images/work-image4.jpg" class="img-responsive" alt=""></a>
+                                   </div>
+                                   
+                                   <div class="media-body blog-info">
+                                        <small><i class="fa fa-clock-o"></i> Read Four</small>
+                                        <!-- <h3><a href="index2_2.html">查看个人预约</a></h3> -->
+                                        <div class="col-md-6 col-sm-6">
+                                             <input type="text" name="input_id1" class="form-control" placeholder="s_id" id="cf-name" name="cf-name" required="">
+                                        </div>
+                                        <div class="col-md-6 col-sm-6">
+                                             <input type="text" name="input_id2" class="form-control" placeholder="s_na" id="cf-name" name="cf-name" required="">
+                                        </div> 
+                                        <br>
+                                        <br>
+                                        <div class="col-md-6 col-sm-6">
+                                             <input type="text" name="input_id3" class="form-control" placeholder="c_id" id="cf-name" name="cf-name" required="">
+                                        </div>
+                                        <div class="col-md-6 col-sm-6">
+                                             <input type="text" name="input_id4" class="form-control" placeholder="s_money" id="cf-name" name="cf-name" required="">
+                                        </div>    
+                                        <br>
+                                        <br>
+                                        <input type="submit" class="btn section-btn" name="submit3" value="增加学生信息">
+                                   </div>
+     
+                              </form>
+                         </div>
+                    </div>
+                    
+               </div>
+          </div>
+     </section>
+
+
+     <section id="class_manage" data-stellar-background-ratio="0.5">
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-md-12 col-sm-12">
+                         <div class="section-title">
+                              <h2>班级管理</h2>
+                              <span class="line-bar">...</span>
+                         </div>
+                    </div>
+
+                    <div class="col-md-6 col-sm-6">
+                         <!-- BLOG THUMB -->
+                         <div class="media blog-thumb">
+                              <form id="contact-form" role="form" action="/index4_result" method="post">
+                                   <div class="media-object media-left">
+                                        <img src="../static/images/blog-image1.jpg" class="img-responsive" alt=""></a>
+                                   </div>
+                                   <div class="media-body blog-info">
+                                        <small><i class="fa fa-clock-o"></i> Read One</small>
+                                        <h3>查看全部的班级信息</a></h3>
+                                        <input type="submit" class="btn section-btn" name="submit0" value="查看">
+                                   </div>
+                              </form>
+                         </div>
+                    </div>
+
+                    <div class="col-md-6 col-sm-6">
+                         <!-- BLOG THUMB -->
+                         <div class="media blog-thumb">
+
+                              <form id="contact-form" role="form" action="/index4_result" method="post">
+                                   <div class="media-object media-left">
+                                        <img src="../static/images/work-image2.jpg" class="img-responsive" alt=""></a>
+                                   </div>
+                                   
+                                   <div class="media-body blog-info">
+                                        <small><i class="fa fa-clock-o"></i> Read Two</small>
+                                        <!-- <h3><a href="index2_2.html">查看个人预约</a></h3> -->
+                                        <div class="col-md-6 col-sm-6">
+                                        <input type="text" name ='input_id' class="form-control" placeholder="班级id" id="cf-name" name="cf-name" required="">
+                                        </div> 
+                                        <br>
+                                        <input type="submit" class="btn section-btn" name="submit1" value="查看某个班级的信息">
+                                   </div>
+     
+                              </form>
+                         </div>
+                    </div>
+
+                    <div class="col-md-6 col-sm-6">
+                         <!-- BLOG THUMB -->
+                         <div class="media blog-thumb">
+
+                              <form id="contact-form" role="form" action="/index4_result" method="post">
+                                   <div class="media-object media-left">
+                                        <img src="../static/images/work-image3.jpg" class="img-responsive" alt=""></a>
+                                   </div>
+                                   
+                                   <div class="media-body blog-info">
+                                        <small><i class="fa fa-clock-o"></i> Read Three</small>
+                                        <!-- <h3><a href="index2_2.html">查看个人预约</a></h3> -->
+                                        <div class="col-md-6 col-sm-6">
+                                        <input type="text" name ='input_id' class="form-control" placeholder="班级id" id="cf-name" name="cf-name" required="">
+                                        </div> 
+                                        <br>
+                                        <input type="submit" class="btn section-btn" name="submit2" value="删除班级的信息">
+                                   </div>
+     
+                              </form>
+                         </div>
+                    </div>
+
+                    <div class="col-md-6 col-sm-6">
+                         <!-- BLOG THUMB -->
+                         <div class="media blog-thumb">
+
+                              <form id="contact-form" role="form" action="/index4_result" method="post">
+                                   <div class="media-object media-left">
+                                        <img src="../static/images/work-image4.jpg" class="img-responsive" alt=""></a>
+                                   </div>
+                                   
+                                   <div class="media-body blog-info">
+                                        <small><i class="fa fa-clock-o"></i> Read Four</small>
+                                        <!-- <h3><a href="index2_2.html">查看个人预约</a></h3> -->
+                                        <div class="col-md-6 col-sm-6">
+                                             <input type="text" name="input_id1" class="form-control" placeholder="班级名称" id="cf-name" name="cf-name" required="">
+                                        </div>
+                                        <!-- <div class="col-md-6 col-sm-6">
+                                             <input type="text" name="input_id2" class="form-control" placeholder="c_na" id="cf-name" name="cf-name" required="">
+                                        </div>  -->
+                                        <br>
+                                        <br>
+                                        <input type="submit" class="btn section-btn" name="submit3" value="增加班级信息">
+                                   </div>
+     
+                              </form>
+                         </div>
+                    </div>
+                    
+               </div>
+          </div>
+     </section>
+     <section id="com_sta" data-stellar-background-ratio="0.5">
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-md-12 col-sm-12">
+                         <div class="section-title">
+                              <h2>个人预约统计</h2>
+                              <span class="line-bar">...</span>
+                         </div>
+                    </div>
+
+                    <div class="col-md-6 col-sm-6">
+                         <!-- BLOG THUMB -->
+                         <div class="media blog-thumb">
+                              <form id="contact-form" role="form" action="/index5_result" method="post">
+                                   <div class="media-object media-left">
+                                        <img src="../static/images/blog-image1.jpg" class="img-responsive" alt=""></a>
+                                   </div>
+                                   <div class="media-body blog-info">
+                                        <small><i class="fa fa-clock-o"></i> Read One</small>
+                                        <h3>查看所有人的预约</a></h3>
+                                        <input type="submit" class="btn section-btn" name="submit0" value="查看">
+                                   </div>
+                              </form>
+                         </div>
+                    </div>
+
+                    <div class="col-md-6 col-sm-6">
+                         <!-- BLOG THUMB -->
+                         <div class="media blog-thumb">
+
+                              <form id="contact-form" role="form" action="/index5_result" method="post">
+                                   <div class="media-object media-left">
+                                        <img src="../static/images/work-image2.jpg" class="img-responsive" alt=""></a>
+                                   </div>
+                                   
+                                   <div class="media-body blog-info">
+                                        <small><i class="fa fa-clock-o"></i> Read Two</small>
+                                        <!-- <h3><a href="index2_2.html">查看个人预约</a></h3> -->
+                                        <div class="col-md-6 col-sm-6">
+                                        <input type="text" name ='input_id' class="form-control" placeholder="学生id" id="cf-name" name="cf-name" required="">
+                                        </div> 
+                                        <br>
+                                        <input type="submit" class="btn section-btn" name="submit1" value="查看某个人的预约">
+                                   </div>
+     
+                              </form>
+                         </div>
+                    </div>
+
+                    <div class="col-md-6 col-sm-6">
+                         <!-- BLOG THUMB -->
+                         <div class="media blog-thumb">
+
+                              <form id="contact-form" role="form" action="/index5_result" method="post">
+                                   <div class="media-object media-left">
+                                        <img src="../static/images/work-image3.jpg" class="img-responsive" alt=""></a>
+                                   </div>
+                                   
+                                   <div class="media-body blog-info">
+                                        <small><i class="fa fa-clock-o"></i> Read Three</small>
+                                        <!-- <h3><a href="index2_2.html">查看个人预约</a></h3> -->
+                                        <div class="col-md-6 col-sm-6">
+                                        <input type="text" name ='input_id' class="form-control" placeholder="学生id" id="cf-name" name="cf-name" required="">
+                                        </div> 
+                                        <br>
+                                        <input type="submit" class="btn section-btn" name="submit2" value="删除某个人的预约">
+                                   </div>
+     
+                              </form>
+                         </div>
+                    </div>
+
+                    <div class="col-md-6 col-sm-6">
+                         <!-- BLOG THUMB -->
+                         <div class="media blog-thumb">
+
+                              <form id="contact-form" role="form" action="/index5_result" method="post">
+                                   <div class="media-object media-left">
+                                        <img src="../static/images/work-image4.jpg" class="img-responsive" alt=""></a>
+                                   </div>
+                                   
+                                   <div class="media-body blog-info">
+                                        <small><i class="fa fa-clock-o"></i> Read Four</small>
+                                        <!-- <h3><a href="index2_2.html">查看个人预约</a></h3> -->
+                                        <div class="col-md-6 col-sm-6">
+                                        <input type="text" name ='input_id' class="form-control" placeholder="学生id" id="cf-name" name="cf-name" required="">
+                                        </div> 
+                                        <br>
+                                        <input type="submit" class="btn section-btn" name="submit3" value="某个人完成预约">
+                                   </div>
+     
+                              </form>
+                         </div>
+                    </div>
+
+                    
+                    
+               </div>
+          </div>
+     </section>
+     <!-- WORK -->
+  
+
+     <section id="free" data-stellar-background-ratio="0.5">
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-md-12 col-sm-12">
+                         <div class="section-title">
+                              <h2>机房空闲情况及预约</h2>
+                              <span class="line-bar">...</span>
+                         </div>
+                    </div>
+
+                    <div class="col-md-6 col-sm-6">
+                         <!-- BLOG THUMB -->
+                         <div class="media blog-thumb">
+                              <form id="contact-form" role="form" action="/index6_result" method="post">
+                                   <div class="media-object media-left">
+                                        <img src="../static/images/blog-image1.jpg" class="img-responsive" alt=""></a>
+                                   </div>
+                                   <div class="media-body blog-info">
+                                        <small><i class="fa fa-clock-o"></i> Read One</small>
+                                        <h3>获取现在班级的所有的空闲的机房</a></h3>
+                                        <input type="submit" class="btn section-btn" name="submit0" value="获取">
+                                   </div>
+                              </form>
+                         </div>
+                    </div>
+
+                    <div class="col-md-6 col-sm-6">
+                         <!-- BLOG THUMB -->
+                         <div class="media blog-thumb">
+
+                              <form id="contact-form" role="form" action="/index6_result" method="post">
+                                   <div class="media-object media-left">
+                                        <img src="../static/images/work-image2.jpg" class="img-responsive" alt=""></a>
+                                   </div>
+                                   
+                                   <div class="media-body blog-info">
+                                        <small><i class="fa fa-clock-o"></i> Read Two</small>
+                                        <!-- <h3><a href="index2_2.html">查看个人预约</a></h3> -->
+                                        <div class="col-md-6 col-sm-6">
+                                             <input type="text" name="input_id1" class="form-control" placeholder="c_id" id="cf-name" name="cf-name" required="">
+                                        </div>
+                                        <div class="col-md-6 col-sm-6">
+                                             <input type="text" name="input_id2" class="form-control" placeholder="crs_time" id="cf-name" name="cf-name" required="">
+                                        </div> 
+                                        <br>
+                                        <br>
+                                        <div class="col-md-6 col-sm-6">
+                                             <input type="text" name="input_id3" class="form-control" placeholder="crs_long" id="cf-name" name="cf-name" required="">
+                                        </div>
+                                        <div class="col-md-6 col-sm-6">
+                                             <input type="text" name="input_id4" class="form-control" placeholder="cr_id" id="cf-name" name="cf-name" required="">
+                                        </div>    
+                                        <br>
+                                        <br>
+                                        <input type="submit" class="btn section-btn" name="submit1" value="增加班级预约">
+                                   </div>
+     
+                              </form>
+                         </div>
+                    </div>
+
+                    <div class="col-md-6 col-sm-6">
+                         <!-- BLOG THUMB -->
+                         <div class="media blog-thumb">
+
+                              <form id="contact-form" role="form" action="/index6_result" method="post">
+                                   <div class="media-object media-left">
+                                        <img src="../static/images/work-image3.jpg" class="img-responsive" alt=""></a>
+                                   </div>
+                                   
+                                   <div class="media-body blog-info">
+                                        <small><i class="fa fa-clock-o"></i> Read Three</small>
+                                        <h3>获取现在个人的所有的空闲的机房</a></h3>
+                                        <!-- <div class="col-md-6 col-sm-6">
+                                             <input type="text" class="form-control" placeholder="学生id" id="cf-name" name="cf-name" required="">
+                                        </div>  -->
+                                        <br>
+                                        <input type="submit" class="btn section-btn" name="submit2" value="获取">
+                                   </div>
+     
+                              </form>
+                         </div>
+                    </div>
+
+                    <div class="col-md-6 col-sm-6">
+                         <!-- BLOG THUMB -->
+                         <div class="media blog-thumb">
+
+                              <form id="contact-form" role="form" action="/index6_result" method="post">
+                                   <div class="media-object media-left">
+                                        <img src="../static/images/work-image4.jpg" class="img-responsive" alt=""></a>
+                                   </div>
+                                   
+                                   <div class="media-body blog-info">
+                                        <small><i class="fa fa-clock-o"></i> Read Four</small>
+                                        <!-- <h3><a href="index2_2.html">查看个人预约</a></h3> -->
+                                        <div class="col-md-6 col-sm-6">
+                                             <input type="text" name="input_id1" class="form-control" placeholder="s_id：" id="cf-name" name="cf-name" required="">
+                                        </div>
+                                        <div class="col-md-6 col-sm-6">
+                                             <input type="text" name="input_id2" class="form-control" placeholder="cr_id" id="cf-name" name="cf-name" required="">
+                                        </div> 
+                                        <br>
+                                        <br>
+                                        <div class="col-md-6 col-sm-6">
+                                             <input type="text" name="input_id3" class="form-control" placeholder="start" id="cf-name" name="cf-name" required="">
+                                        </div>  
+                                        <br>
+                                        <br>
+                                        <input type="submit" class="btn section-btn" name="submit3" value="增加个人预约">
+                                   </div>
+     
+                              </form>
+                         </div>
+                    </div>
+                    
+               </div>
+          </div>
+     </section>
+
+
+   
+     
+
+
+
+     <section id="room_manage" data-stellar-background-ratio="0.5">
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-md-12 col-sm-12">
+                         <div class="section-title">
+                              <h2>机房管理</h2>
+                              <span class="line-bar">...</span>
+                         </div>
+                    </div>
+
+                    <div class="col-md-6 col-sm-6">
+                         <!-- BLOG THUMB -->
+                         <div class="media blog-thumb">
+
+                              <form id="contact-form" role="form" action="/index7_result" method="post">
+                                   <div class="media-object media-left">
+                                        <img src="../static/images/blog-image1.jpg" class="img-responsive" alt=""></a>
+                                   </div>
+                                   
+                                   <div class="media-body blog-info">
+                                        <small><i class="fa fa-clock-o"></i> Read One</small>
+                                        <!-- <h3><a href="index2_2.html">查看个人预约</a></h3> -->
+                                        <div class="col-md-6 col-sm-6">
+                                             <input type="text" name="input_id1" class="form-control" placeholder="机房地址：" id="cf-name" name="cf-name" required="">
+                                        </div>
+                                        <div class="col-md-6 col-sm-6">
+                                             <input type="text" name="input_id2" class="form-control" placeholder="机房名称：" id="cf-name" name="cf-name" required="">
+                                        </div> 
+                                        <br>
+                                        <br>
+                                        <div class="col-md-6 col-sm-6">
+                                             <input type="text" name="input_id3" class="form-control" placeholder="电脑数量：" id="cf-name" name="cf-name" required="">
+                                        </div>  
+
+                                        <div class="col-md-6 col-sm-6">
+                                             <input type="text" name="input_id4" class="form-control" placeholder="机房用途：" id="cf-name" name="cf-name" required="">
+                                        </div>  
+                                        <br>
+                                        <br>    
+                                        <div class="col-md-6 col-sm-6">
+                                             <input type="text" name="input_id5" class="form-control" placeholder="机房价格：" id="cf-name" name="cf-name" required="">
+                                        </div>  
+                                        <input type="submit" class="btn section-btn" name="submit0" value="添加一个机房">
+                                   </div>
+     
+                              </form>
+                         </div>
+                    </div>
+
+                    <div class="col-md-6 col-sm-6">
+                         <!-- BLOG THUMB -->
+                         <div class="media blog-thumb">
+
+                              <form id="contact-form" role="form" action="/index7_result" method="post">
+                                   <div class="media-object media-left">
+                                        <img src="../static/images/work-image2.jpg" class="img-responsive" alt=""></a>
+                                   </div>
+                                   
+                                   <div class="media-body blog-info">
+                                        <small><i class="fa fa-clock-o"></i> Read Two</small>
+                                        <!-- <h3><a href="index2_2.html">查看个人预约</a></h3> -->
+                                        <div class="col-md-6 col-sm-6">
+                                             <input type="text" name="input_id1" class="form-control" placeholder="机房id：" id="cf-name" name="cf-name" required="">
+                                        </div> 
+                                        <input type="submit" class="btn section-btn" name="submit1" value="删除机房">
+                                   </div>
+     
+                              </form>
+                         </div>
+                    </div>
+
+
+                   
+                    
+               </div>
+          </div>
+     </section> 
+
+
+     <section id="security" data-stellar-background-ratio="0.5">
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-md-12 col-sm-12">
+                         <div class="section-title">
+                              <h2>备份和恢复</h2>
+                              <span class="line-bar">...</span>
+                         </div>
+                    </div>
+
+                    <div class="col-md-6 col-sm-6">
+                         <!-- BLOG THUMB -->
+                         <div class="media blog-thumb">
+
+                              <form id="contact-form" role="form" action="/index8_result" method="post">
+                                   <div class="media-object media-left">
+                                        <img src="../static/images/blog-image1.jpg" class="img-responsive" alt=""></a>
+                                   </div>
+                                   
+                                   <div class="media-body blog-info">
+                                        <small><i class="fa fa-clock-o"></i> Read One</small>
+                                        <!-- <h3><a href="index2_2.html">查看个人预约</a></h3> -->
+                                        
+ 
+                                        <input type="submit" class="btn section-btn" name="submit0" value="开始备份">
+                                   </div>
+     
+                              </form>
+                         </div>
+                    </div>
+
+                    <div class="col-md-6 col-sm-6">
+                         <!-- BLOG THUMB -->
+                         <div class="media blog-thumb">
+
+                              <form id="contact-form" role="form" action="/index8_result" method="post">
+                                   <div class="media-object media-left">
+                                        <img src="../static/images/work-image2.jpg" class="img-responsive" alt=""></a>
+                                   </div>
+                                   
+                                   <div class="media-body blog-info">
+                                        <small><i class="fa fa-clock-o"></i> Read Two</small>
+                                        <!-- <h3><a href="index2_2.html">查看个人预约</a></h3> -->
+
+                                        <input type="submit" class="btn section-btn" name="submit1" value="开始恢复">
+                                   </div>
+     
+                              </form>
+                         </div>
+                    </div>
+
+
+                   
+                    
+               </div>
+          </div>
+     </section>
+
+
+
+     <!-- WORK -->
+     <section id="fre" data-stellar-background-ratio="0.5">
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-md-12 col-sm-12">
+                         <div class="section-title">
+                              <h2></h2>
+                              <span class="line-bar">...</span>
+                         </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6">
+                         <!-- WORK THUMB -->
+                         <div class="work-thumb">
+                              <a href="../static/images/work-image1.jpg" class="image-popup">
+                                   <img src="../static/images/work-image1.jpg" class="img-responsive" alt="Work">
+
+                                   <div class="work-info">
+                                        <h3>Clean &amp; Minimal</h3>
+                                        <small>Product Design</small>
+                                   </div>
+                              </a>
+                         </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6">
+                         <!-- WORK THUMB -->
+                         <div class="work-thumb">
+                              <a href="../static/images/work-image2.jpg" class="image-popup">
+                                   <img src="../static/images/work-image2.jpg" class="img-responsive" alt="Work">
+
+                                   <div class="work-info">
+                                        <h3>Studio Bag</h3>
+                                        <small>Branding</small>
+                                   </div>
+                              </a>
+                         </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6">
+                         <!-- WORK THUMB -->
+                         <div class="work-thumb">
+                              <a href="../static/images/work-image3.jpg" class="image-popup">
+                                   <img src="../static/images/work-image3.jpg" class="img-responsive" alt="Work">
+
+                                   <div class="work-info">
+                                        <h3>Frame Design</h3>
+                                        <small>Photography</small>
+                                   </div>
+                              </a>
+                         </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6">
+                         <!-- WORK THUMB -->
+                         <div class="work-thumb">
+                              <a href="../static/images/work-image4.jpg" class="image-popup">
+                                   <img src="../static/images/work-image4.jpg" class="img-responsive" alt="Work">
+
+                                   <div class="work-info">
+                                        <h3>Paint Work</h3>
+                                        <small>Art, Design</small>
+                                   </div>
+                              </a>
+                         </div>
+                    </div>
+
+               </div>
+          </div>
+     </section>
+
+   
+
+     <!-- SCRIPTS -->
+     <script src="../static/js/jquery.js"></script>
+     <script src="../static/js/bootstrap.min.js"></script>
+     <script src="../static/js/jquery.stellar.min.js"></script>
+     <script src="../static/js/jquery.magnific-popup.min.js"></script>
+     <script src="../static/js/smoothscroll.js"></script>
+     <script src="../static/js/custom.js"></script>
+
+</body>
+</html>

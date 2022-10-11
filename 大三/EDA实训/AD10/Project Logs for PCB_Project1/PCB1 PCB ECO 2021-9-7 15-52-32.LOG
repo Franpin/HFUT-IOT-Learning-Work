@@ -1,0 +1,8 @@
+Added Component: Designator=V1(PCBComponent_1)
+Added Pin To Net: NetName=GND Pin=V1-3
+Added Pin To Net: NetName=VCC Pin=V1-4
+Added Pin To Net: NetName=VEE Pin=V1-5
+Added Pin To Net: NetName=NetR9_1 Pin=R9-1
+Added Pin To Net: NetName=NetR9_1 Pin=U1-3
+Added Net: Name=NetR9_1
+Added Member To Class: ClassName=Sheet1 Member=Component V1 Component_1

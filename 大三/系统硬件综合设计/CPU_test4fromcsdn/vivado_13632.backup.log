@@ -1,0 +1,27 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Sun Dec 26 18:12:48 2021
+# Process ID: 13632
+# Current directory: D:/桌面/CPU_test4fromcsdn
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent10556 D:\桌面\CPU_test4fromcsdn\CPU_test4fromcsdn.xpr
+# Log file: D:/桌面/CPU_test4fromcsdn/vivado.log
+# Journal file: D:/桌面/CPU_test4fromcsdn\vivado.jou
+#-----------------------------------------------------------sstart_guoexit
+INFO: [Common 17-206] Exiting Vivado at Sun Dec 26 18:13:47 2021...
+urces...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Vivado/Vivado/2020.1/data/ip'.
+open_project: Time (s): cpu = 00:00:32 ; elapsed = 00:00:19 . Memory (MB): peak = 1055.090 ; gain = 0.000
+update_compile_order -fileset sources_1
+update_compile_order -fileset sim_1
+exit
+INFO: [Common 17-206] Exiting Vivado at Sun Dec 26 18:14:00 2021...
+emory (MB): peak = 1055.352 ; gain = 0.000
+update_compile_order -fileset sim_1
+update_compile_order -fileset sources_1
+exit
+INFO: [Common 17-206] Exiting Vivado at Sun Dec 26 18:15:36 2021...

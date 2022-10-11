@@ -1,0 +1,69 @@
+
+led.elf:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+50000000 <_start>:
+50000000:	e3a00207 	mov	r0, #1879048192	; 0x70000000
+50000004:	e3800013 	orr	r0, r0, #19
+50000008:	ee0f0f92 	mcr	15, 0, r0, cr15, cr2, {4}
+5000000c:	e59f0078 	ldr	r0, [pc, #120]	; 5000008c <delay_loop+0x10>
+50000010:	e3a01000 	mov	r1, #0
+50000014:	e5801000 	str	r1, [r0]
+50000018:	e59f1070 	ldr	r1, [pc, #112]	; 50000090 <delay_loop+0x14>
+5000001c:	e59f0070 	ldr	r0, [pc, #112]	; 50000094 <delay_loop+0x18>
+50000020:	e5810000 	str	r0, [r1]
+50000024:	e3a02a01 	mov	r2, #4096	; 0x1000
+
+50000028 <led_blink>:
+50000028:	e59f1068 	ldr	r1, [pc, #104]	; 50000098 <delay_loop+0x1c>
+5000002c:	e3a00000 	mov	r0, #0
+50000030:	e5810000 	str	r0, [r1]
+50000034:	eb00000f 	bl	50000078 <delay>
+50000038:	e59f1058 	ldr	r1, [pc, #88]	; 50000098 <delay_loop+0x1c>
+5000003c:	e3a000c0 	mov	r0, #192	; 0xc0
+50000040:	e5810000 	str	r0, [r1]
+50000044:	eb00000b 	bl	50000078 <delay>
+50000048:	e59f1048 	ldr	r1, [pc, #72]	; 50000098 <delay_loop+0x1c>
+5000004c:	e3a00030 	mov	r0, #48	; 0x30
+50000050:	e5810000 	str	r0, [r1]
+50000054:	eb000007 	bl	50000078 <delay>
+50000058:	e59f1038 	ldr	r1, [pc, #56]	; 50000098 <delay_loop+0x1c>
+5000005c:	e3a000f0 	mov	r0, #240	; 0xf0
+50000060:	e5810000 	str	r0, [r1]
+50000064:	eb000003 	bl	50000078 <delay>
+50000068:	e2422001 	sub	r2, r2, #1
+5000006c:	e3520000 	cmp	r2, #0
+50000070:	1affffec 	bne	50000028 <led_blink>
+
+50000074 <halt>:
+50000074:	eafffffe 	b	50000074 <halt>
+
+50000078 <delay>:
+50000078:	e3a00401 	mov	r0, #16777216	; 0x1000000
+
+5000007c <delay_loop>:
+5000007c:	e3500000 	cmp	r0, #0
+50000080:	e2400001 	sub	r0, r0, #1
+50000084:	1afffffc 	bne	5000007c <delay_loop>
+50000088:	e1a0f00e 	mov	pc, lr
+5000008c:	7e004000 	cdpvc	0, 0, cr4, cr0, cr0, {0}
+50000090:	7f008800 	svcvc	0x00008800
+50000094:	11110000 	tstne	r1, r0
+50000098:	7f008808 	svcvc	0x00008808
+
+Disassembly of section .ARM.attributes:
+
+00000000 <.ARM.attributes>:
+   0:	00002541 	andeq	r2, r0, r1, asr #10
+   4:	61656100 	cmnvs	r5, r0, lsl #2
+   8:	01006962 	tsteq	r0, r2, ror #18
+   c:	0000001b 	andeq	r0, r0, fp, lsl r0
+  10:	4d524105 	ldfmie	f4, [r2, #-20]	; 0xffffffec
+  14:	36373131 	undefined instruction 0x36373131
+  18:	2d465a4a 	vstrcs	s11, [r6, #-296]	; 0xfffffed8
+  1c:	09060053 	stmdbeq	r6, {r0, r1, r4, r6}
+  20:	01090108 	tsteq	r9, r8, lsl #2
+  24:	Address 0x00000024 is out of bounds.
+

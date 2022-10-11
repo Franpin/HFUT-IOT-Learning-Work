@@ -1,0 +1,1164 @@
+（3）求6~200间数的质数和。
+#include<iostream>
+using namespace std;
+int isprime(int n);
+int main()
+{	
+	for(int i=3;i<=100;i++)
+	for(int n=0;n<=i-2;n++)
+	{
+		if(isprime(i-n)&&isprime(i+n))
+		cout<<2*i<<"="<<i-n<<"+"<<i+n<<endl;
+	}
+return 0;
+}
+int isprime(int n){
+	for(int i=2;i<n;i++)
+	if(n%i==0)
+	return 0;
+	return 1;
+}
+（5）
+求公约数。
+#include<iostream>
+using namespace std;
+int fu(int ,int,int);
+int main(){
+int a,b,n;
+cout<<"please enter a number a:";
+cin>>a;
+cout<<"please input a number b:";
+cin>>b;
+cout<<"please input a numner n:";
+cin>>n; 
+cout<<"a与b的最大公因子是"<<fu(n,a,b)<<endl;
+return 0;
+}
+int fu(int n,int a,int b){
+if (n==2)
+return b;
+if(n==1)
+return a;
+return fu(n-2,a,b)%fu(n-1,a,b)==0?fu(n-1,a,b):fu(n-2,a,b)%fu(n-1,a,b);
+
+}
+		第十周程序设计作业
+ 学号：2019217819  姓名：付炎平   班级：物联网工程19-2班
+1.（5.2）从键盘上输入10个浮点数，求出它们的和以及平均值，要求用函数实现。
+#include<iostream>
+using namespace std;
+float sum(float a[],int i);
+int main(){
+	float a[10],s,x;
+	for(int i=0;i<10;i++)
+	cin>>a[i];
+	s=sum(a,10);
+	x=s/10;
+	cout<<"十个数的和为："<<s<<endl;
+	cout<<"平均值为："<<x<<endl;
+	return 0;
+} 
+float sum(float a[],int i){
+	if(i==0)
+	return 0;
+	else
+	return a[i-1]+sum(a,i-1);
+}
+
+2.（5.6）设计一个函数，实现把输入的一个十进制数转换为十二进制数。
+#include<iostream>
+using namespace std;
+int f(int n,int a[])
+{	int c,i;
+	for(i=0;n!=0;i++)
+	{
+	a[i]=n%12;
+	n=n/12;
+}
+	return i-1;
+}
+int main(){
+	int n,a[100];
+	int d;
+	cout<<"请输入一个十进制数："; 
+	cin>>n;
+	d=f(n,a);
+	cout<<"该数的十二进制是："; 
+	for(int i=d;i>=0;i--)
+	if(a[i]>=10)
+	cout<<(char)('A'+(a[i]-10));
+	else
+	cout<<a[i];
+return 0;
+}
+
+3.（5.9）设计一个程序，用重载函数实现计算两个数的平方和，分别实现整形和浮点型的计算。
+#include<iostream>
+using namespace std;
+int f(int a,int b)
+{	
+	return a*a+b*b;
+}
+double f(double a,double b)
+{	
+	return a*a+b*b;
+}
+int main(){
+	int a,b;
+	double c,d;
+	cout<<"请输入两个整数：";
+	cin>>a>>b; 
+	cout<<"请入两个小数：";
+	cin>>c>>d; 
+	cout<<"整型的平方和是："<<f(a,b)<<endl <<"浮点的平方和是"<<f(c,d)<<endl; 
+return 0;
+}
+
+4.（5.15）根据斐波那契数列的计算公式，用递归的方法计算该数列。
+#include<iostream>
+using namespace std;
+int f(int n){
+	if(n==1||n==2)
+	return 1;
+	else
+	return f(n-1)+f(n-2);
+}
+int main(){
+	int n;
+	cin>>n;
+	printf("该数列的第%d项是：%d",n,f(n));
+return 0;
+}
+
+5.（5.20）写出下列程序的运算结果。
+#include<iostream.h>
+#define A b*b-b
+#define C A-A
+Int  main ( )
+{
+	int b =1;
+	cout<<”C=”<<C;
+	return 0;
+}
+该程序的运算结果为-2。
+17.
+#include<iostream>
+#include<math.h>
+using namespace std;
+int isprime(int m) {
+	for (int i = 2; i < m; i++)
+		if (m % i == 0)
+			return 0;
+	return 1;
+}
+int main() {
+	int n, s = 0, k = 0;
+	int a[999];
+	for (int i = 2; i <= 1500; i++)
+		if (isprime(i)) {
+			k++;
+			a[k] = i;
+		}
+	for (int j = 0; j <= 4; j++)
+		s = s + a[k - j];
+	cout << s << endl;
+	return 0;
+}
+桶排序：
+#include<iostream>
+#include<math.h>
+using namespace std;
+int main(){
+	int a[999]={0};
+	for(int i=1;i<=10;i++)
+	{	int t;
+		cin>>t;
+		a[t]++;
+	}
+	for(int m=100;m>=0;m--)
+	while(a[m]){
+	cout<<m<<"  ";
+	a[m]--;
+}
+	return 0;
+}
+选择排序：
+#include<iostream>
+#include<math.h>
+using namespace std;
+void swap(int &a,int &b){
+	int t;
+	t=a;
+	a=b;
+	b=t;
+}
+int main(){
+	int a[999]={0};
+	for(int i=1;i<=10;i++)
+	{	int t;
+		cin>>a[i];
+	}
+	for(int i=1;i<=9;i++)
+	for(int m=i+1;m<=10;m++)
+	{
+	if(a[m]>a[i])
+	swap(a[i],a[m]);	
+}
+	for(int i=1;i<=10;i++)
+	cout<<a[i]<<" ";
+	return 0;
+}
+（18）getchar()的使用
+#include<iostream>
+using namespace std;
+int main(){
+	char a[8][100],c;
+	for(int i=0;i<8;i++)
+	for(int n=0;(a[i][n]=getchar())!='\n';n++)
+	;
+	cout<<"按照原序："<<endl;
+	for(int i=0;i<8;i++){
+	for(int n=0;a[i][n]!='\n';n++)
+	cout<<a[i][n];
+	cout<<endl;
+}
+	cout<<"按照字母序:"<<endl;
+	for(int i=0;i<8;i++){
+	for(char k='A';k<='z';k++)
+	for(int n=0;a[i][n]!='\n';n++)
+	if(a[i][n]==k)
+	cout<<k;
+	cout<<endl;
+}
+cout<<"按照字符逆序："<<endl; 
+for(int i=0;i<8;i++){
+	for(char k='z';k>='A';k--)
+	for(int n=0;a[i][n]!='\n';n++)
+	if(a[i][n]==k)
+	cout<<k;
+	cout<<endl;
+}
+		return 0;
+}
+推箱子
+#include<iostream>
+#include<windows.h>
+#include<conio.h>
+#include<stdlib.h>
+using namespace std;
+int  n = 0, x = 0;
+int map[1000][3][9][11] = { {
+	{
+	{0,0,0,0,1,1,1,0,0,0,0},
+	{0,0,0,0,1,3,1,0,0,0,0},
+	{0,0,0,0,1,0,1,0,0,0,0},
+	{1,1,1,1,1,4,1,1,1,1,1},
+	{1,3,0,4,0,5,0,0,4,3,1},
+	{1,1,1,1,1,0,1,1,1,1,1},
+	{0,0,0,0,1,4,1,0,0,0,0},
+	{0,0,0,0,1,3,1,0,0,0,0},
+	{0,0,0,0,1,1,1,0,0,0,0},
+},{
+{0,1,1,1,1,1,1,1,1,1,1},
+{0,1,0,0,0,0,0,0,0,0,1},
+{0,1,4,0,0,0,4,0,0,0,1},
+{0,1,0,3,1,3,0,0,0,1,1},
+{0,1,0,1,1,1,0,0,0,1,0},
+{1,1,0,3,1,3,4,0,0,1,0},
+{1,0,4,0,0,0,0,0,0,1,0},
+{1,5,0,0,0,0,0,0,0,1,0},
+{1,1,1,1,1,1,1,1,1,1,0},
+},{
+	//--------------------------//	
+		{0,1,1,1,1,1,1,1,1,1,0},
+		{0,1,0,0,0,1,0,0,0,1,0},
+		{0,1,0,4,4,4,4,4,0,1,0},
+		{0,1,0,4,0,4,0,4,0,1,1},
+		{0,1,0,0,0,0,0,0,4,0,1},
+		{1,1,0,1,1,1,1,0,4,0,1},
+		{1,0,8,3,3,3,3,0,0,0,1},
+		{1,0,3,3,3,3,3,0,0,1,1},
+		{1,1,1,1,1,1,1,1,1,1,0}
+	} } };
+int color(int c)
+{
+	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), c);        //更改文字颜色
+	return 0;
+}
+void add() {
+	for (int i = 0; i < 9; i++)
+		for (int j = 0; j < 11; j++)
+			map[n + 1][x][i][j] = map[n][x][i][j];
+	n++;
+}
+void drawmap() {
+	for (int i = 0; i < 9; i++) {
+		for (int j = 0; j < 11; j++) {
+			switch (map[n][x][i][j]) {
+			case 0:
+				cout << "  ";
+				break;
+			case 1:
+				cout << "■";
+				break;
+			case 3:
+				cout << "☆";
+				break;
+			case 4:
+				cout << "□";
+				break;
+			case 5:
+				cout << "♀";
+				break;
+			case 7:
+				cout << "★";
+				break;
+			case 8:
+				cout << "♀";
+				break;
+			}
+		}
+		cout << endl;
+	}
+}
+void playgame()
+{
+	int r, c, j, a;
+	for (int i = 0; i < 9; i++)
+	{
+		for (j = 0; j < 11; j++)
+			if (map[n][x][i][j] == 5 || map[n][x][i][j] == 8)//人的下标 
+			{
+				r = i;
+				c = j;
+			}
+	}
+	int b = _getch();
+	if (b == 32) {
+		if (n != 0)
+			n--;
+	}
+	else {
+		a = _getch();
+		switch (a)
+		{
+		case 72:
+			if (map[n][x][r - 1][c] == 0 || map[n][x][r - 1][c] == 3)
+			{
+				add();
+				map[n][x][r - 1][c] += 5;
+				map[n][x][r][c] -= 5;
+				
+			}
+			else if (map[n][x][r - 1][c] == 4 || map[n][x][r - 1][c] == 7)
+			{
+				if (map[n][x][r - 2][c] == 0 || map[n][x][r - 2][c] == 3)
+				{
+					add();
+					map[n][x][r - 2][c] += 4;
+					map[n][x][r - 1][c] += 1;
+					map[n][x][r][c] -= 5;
+					
+				}
+			}
+			break;
+		case 80:
+			if (map[n][x][r + 1][c] == 0 || map[n][x][r + 1][c] == 3)
+			{
+				add();
+				map[n][x][r + 1][c] += 5;
+				map[n][x][r][c] -= 5;
+				
+			}
+			else if (map[n][x][r + 1][c] == 4 || map[n][x][r + 1][c] == 7)
+			{
+				if (map[n][x][r + 2][c] == 0 || map[n][x][r + 2][c] == 3)
+				{
+					add();
+					map[n][x][r + 2][c] += 4;
+					map[n][x][r + 1][c] += 1;
+					map[n][x][r][c] -= 5;
+					
+				}
+			}
+			break;
+		case 75:
+			if (map[n][x][r][c - 1] == 0 || map[n][x][r][c - 1] == 3)
+			{
+				add();
+				map[n][x][r][c - 1] += 5;
+				map[n][x][r][c] -= 5;
+				
+			}
+			else if (map[n][x][r][c - 1] == 4 || map[n][x][r][c - 1] == 7)
+			{
+				if (map[n][x][r][c - 2] == 0 || map[n][x][r][c - 2] == 3)
+				{
+					add();
+					map[n][x][r][c - 2] += 4;
+					map[n][x][r][c - 1] += 1;
+					map[n][x][r][c] -= 5;
+				}
+			}
+			break;
+		case 77:
+			if (map[n][x][r][c + 1] == 0 || map[n][x][r][c + 1] == 3)
+			{
+				add();
+				map[n][x][r][c + 1] += 5;
+				map[n][x][r][c] -= 5;
+				
+			}
+			else if (map[n][x][r][c + 1] == 4 || map[n][x][r][c + 1] == 7)
+			{
+				if (map[n][x][r][c + 2] == 0 || map[n][x][r][c + 2] == 3)
+				{
+					add();
+					map[n][x][r][c + 2] += 4;
+					map[n][x][r][c + 1] += 1;
+					map[n][x][r][c] -= 5;
+					
+				}
+			}
+			break;
+		}
+
+	}
+}
+int endplay() {
+	int s = 1;
+	for (int i = 0; i < 9; i++)
+		for (int t = 0; t < 11; t++)
+			if (map[n][x][i][t] == 4)
+				s++;
+	if (s == 1) {
+		cout << "恭喜过关!" << endl;
+		system("pause");
+		x++;
+		n = 0;
+		return 1;
+	}
+	else
+		return 0;
+}
+int main() {
+	int i = 1;
+	while (1) {
+		
+		system("cls");
+		drawmap();
+		endplay();
+		if (x == 3)
+			break;
+		playgame();
+		color(i);
+		i++;
+	}
+	
+	return 0;
+}
+推箱子源码：
+#include<iostream>
+#include<graphics.h>
+#include<conio.h>
+using namespace std;
+IMAGE img1, img2, img3, img4, img5, img6, img7, img8;
+int  n = 0, x = 0;				//定义全局变量，n用来表示步数，x用来表示关数 
+int map[1000][7][9][11] = { {
+	{
+	{0,0,0,0,1,1,1,0,0,0,0},
+	{0,0,0,0,1,3,1,0,0,0,0},
+	{0,0,0,0,1,0,1,0,0,0,0},
+	{1,1,1,1,1,4,1,1,1,1,1},
+	{1,3,0,4,0,5,0,0,4,3,1},	//第1关地图
+	{1,1,1,1,1,0,1,1,1,1,1},
+	{0,0,0,0,1,4,1,0,0,0,0},
+	{0,0,0,0,1,3,1,0,0,0,0},
+	{0,0,0,0,1,1,1,0,0,0,0},
+},{
+	{1,1,1,1,1,0,0,0,0,0,0},
+	{1,5,0,0,1,0,0,0,0,0,0},
+	{1,0,4,4,1,0,1,1,1,0,0},
+	{1,0,4,0,1,0,1,3,1,0,0},
+	{1,1,0,0,1,1,1,3,1,0,0},	//第2关地图 
+	{0,1,0,0,0,0,0,3,1,0,0},
+	{0,1,0,0,0,1,0,0,1,0,0},
+	{0,1,0,0,1,1,1,1,1,0,0},
+	{0,1,1,1,1,0,0,0,0,0,0},
+ },{
+	{1,1,1,1,1,1,1,1,0,0,0},
+	{1,3,0,0,0,4,0,1,0,0,0},
+	{1,3,4,0,0,1,0,1,0,0,0},
+	{1,3,1,4,1,0,0,1,0,0,0},
+	{1,1,1,0,1,5,1,1,0,0,0},	//第3关地图
+	{0,1,0,0,0,0,1,0,0,0,0},
+	{0,1,0,0,1,1,1,0,0,0,0},
+	{0,1,1,1,1,0,0,0,0,0,0},
+	{0,0,0,0,0,0,0,0,0,0,0},
+},{
+	{1,1,1,1,1,1,0,0,0,0,0},
+	{1,0,0,0,3,1,0,0,0,0,0},
+	{1,0,1,1,0,1,0,0,0,0,0},
+	{1,0,0,4,4,5,1,0,0,0,0},
+	{1,0,1,0,0,0,1,0,0,0,0},	//第4关地图
+	{1,3,0,0,1,1,1,0,0,0,0},
+	{1,1,1,1,1,0,0,0,0,0,0},
+	{0,0,0,0,0,0,0,0,0,0,0},
+	{0,0,0,0,0,0,0,0,0,0,0},
+},{
+	{0,1,1,1,1,1,1,1,1,1,1},
+	{0,1,0,0,0,0,0,0,0,0,1},
+	{0,1,4,0,0,0,4,0,0,0,1},
+	{0,1,0,3,1,3,0,0,0,1,1},
+	{0,1,0,1,1,1,0,0,0,1,0},	//第5关地图
+	{1,1,0,3,1,3,4,0,0,1,0},
+	{1,0,4,0,0,0,0,0,0,1,0},
+	{1,5,0,0,0,0,0,0,0,1,0},
+	{1,1,1,1,1,1,1,1,1,1,0},
+},{
+	{1,1,1,1,1,1,1,1,0,0,0},
+	{1,0,0,1,0,0,0,1,0,0,0},
+	{1,0,4,3,3,4,0,1,0,0,0},
+	{1,5,4,3,7,0,1,1,0,0,0},
+	{1,0,4,3,3,4,0,1,0,0,0},	//第6关地图 
+	{1,0,0,1,0,0,0,1,0,0,0},
+	{1,1,1,1,1,1,1,1,0,0,0},
+	{0 - 0,0,0,0,0,0,0,0,0,0},
+	{0,0,0,0,0,0,0,0,0,0,0},
+},{
+	{0,1,1,1,1,1,1,1,1,1,0},
+	{0,1,0,0,0,1,0,0,0,1,0},
+	{0,1,0,4,4,4,4,4,0,1,0},
+	{0,1,0,4,0,4,0,4,0,1,1},
+	{0,1,0,0,0,0,0,0,4,0,1},	//第7关地图 
+	{1,1,0,1,1,1,1,0,4,0,1},
+	{1,0,8,3,3,3,3,0,0,0,1},
+	{1,0,3,3,3,3,3,0,0,1,1},
+	{1,1,1,1,1,1,1,1,1,1,0}
+	}
+} };
+void drawmap() {
+	loadimage(&img1, "0.png");
+	loadimage(&img2, "1.jpg");
+	loadimage(&img3, "3.png");
+	loadimage(&img4, "4.png");					//读取图片文件
+	loadimage(&img5, "5.png");
+	loadimage(&img6, "6.jpg");
+	loadimage(&img7, "7.png");
+	putimage(550, 0, &img7);
+	for (int i = 0; i < 9; i++) {
+		for (int j = 0; j < 11; j++) {
+			switch (map[n][x][i][j]) {
+			case 0:
+				putimage(50 * j, 50 * i, &img1);
+				break;
+			case 1:
+				putimage(50 * j, 50 * i, &img2);
+				break;
+			case 3:
+				putimage(50 * j, 50 * i, &img3);		//绘制地图
+				break;
+			case 4:
+				putimage(50 * j, 50 * i, &img4);
+				break;
+			case 5:
+				putimage(50 * j, 50 * i, &img5);
+				break;
+			case 7:
+				putimage(50 * j, 50 * i, &img6);
+				break;
+			case 8:
+				putimage(50 * j, 50 * i, &img5);
+				break;
+			}
+		}
+		cout << endl;
+	}
+	char s1[10] = "  ";
+	char s2[10] = "  ";
+	settextstyle(30, 20, "宋体");	//设置字体
+	settextcolor(GREEN);			//设置字体颜色
+	sprintf_s(s1, "%d", n);			//显示步数和关卡的
+	sprintf_s(s2, "%d", x + 1);
+	outtextxy(650, 198, s2);		//由于图形界面只能输出字符串，所以把十进制数转化为字符串
+	outtextxy(650, 225, s1);
+
+}
+void add() {
+	int c;
+	for (int i = 0; i < 9; i++)
+		for (int j = 0; j < 11; j++)
+			map[n + 1][x][i][j] = map[n][x][i][j];	//把每一步的地图给存起来，用来回退上一步 
+	n++;
+}
+void playgame()
+{
+	int r, c, j, a;
+	for (int i = 0; i < 9; i++)
+	{
+		for (j = 0; j < 11; j++)
+			if (map[n][x][i][j] == 5 || map[n][x][i][j] == 8)//遍历数组,寻找人的下标 
+			{
+				r = i;
+				c = j;
+			}
+	}
+	int b = _getch();
+	switch (b) {
+	case 32:
+		if (n != 0)
+			n--;
+		break;
+	case 27:
+		loadimage(&img8, "8.png");		//按下Esc键，进行选关
+		putimage(0, 0, &img8);
+		x = _getch() - 48;
+		x--;
+		n = 0;
+		break;
+	case 224: {
+		a = _getch();
+		switch (a)
+		{
+		case 72:	//按键进行控制人物移动 
+			if (map[n][x][r - 1][c] == 0 || map[n][x][r - 1][c] == 3)
+			{
+				add();
+				map[n][x][r - 1][c] += 5;
+				map[n][x][r][c] -= 5;
+
+			}
+			else if (map[n][x][r - 1][c] == 4 || map[n][x][r - 1][c] == 7)
+			{
+				if (map[n][x][r - 2][c] == 0 || map[n][x][r - 2][c] == 3)
+				{
+					add();
+					map[n][x][r - 2][c] += 4;
+					map[n][x][r - 1][c] += 1;
+					map[n][x][r][c] -= 5;
+
+				}
+			}
+			break;
+		case 80:
+			if (map[n][x][r + 1][c] == 0 || map[n][x][r + 1][c] == 3)
+			{
+				add();
+				map[n][x][r + 1][c] += 5;
+				map[n][x][r][c] -= 5;
+
+			}
+			else if (map[n][x][r + 1][c] == 4 || map[n][x][r + 1][c] == 7)
+			{
+				if (map[n][x][r + 2][c] == 0 || map[n][x][r + 2][c] == 3)
+				{
+					add();
+					map[n][x][r + 2][c] += 4;
+					map[n][x][r + 1][c] += 1;
+					map[n][x][r][c] -= 5;
+
+				}
+			}
+			break;
+		case 75:
+			if (map[n][x][r][c - 1] == 0 || map[n][x][r][c - 1] == 3)
+			{
+				add();
+				map[n][x][r][c - 1] += 5;
+				map[n][x][r][c] -= 5;
+
+			}
+			else if (map[n][x][r][c - 1] == 4 || map[n][x][r][c - 1] == 7)
+			{
+				if (map[n][x][r][c - 2] == 0 || map[n][x][r][c - 2] == 3)
+				{
+					add();
+					map[n][x][r][c - 2] += 4;
+					map[n][x][r][c - 1] += 1;
+					map[n][x][r][c] -= 5;
+				}
+			}
+			break;
+		case 77:
+			if (map[n][x][r][c + 1] == 0 || map[n][x][r][c + 1] == 3)
+			{
+				add();
+				map[n][x][r][c + 1] += 5;
+				map[n][x][r][c] -= 5;
+
+			}
+			else if (map[n][x][r][c + 1] == 4 || map[n][x][r][c + 1] == 7)
+			{
+				if (map[n][x][r][c + 2] == 0 || map[n][x][r][c + 2] == 3)
+				{
+					add();
+					map[n][x][r][c + 2] += 4;
+					map[n][x][r][c + 1] += 1;
+					map[n][x][r][c] -= 5;
+
+				}
+			}
+			break;
+		}
+
+	}
+	}
+}
+int endplay() {
+	int p = 1;
+	for (int i = 0; i < 9; i++)
+		for (int t = 0; t < 11; t++)
+			if (map[n][x][i][t] == 4)//判断是否通关
+				p++;
+	if (p == 1) {
+		x++;						//如果通关则进入下一关
+		n = 0;
+		return 1;
+	}
+	else
+		return 0;
+}
+int main() {
+	initgraph(814, 450);			//设置图形界面大小
+	setbkcolor(WHITE);				//设置图形界面背景颜色
+	loadimage(&img8, "8.png");
+	putimage(0, 0, &img8);
+	x = _getch() - 48;				//起始选关
+	x--;
+	n = 0;
+	while (1) {
+		drawmap();					//绘制地图
+		endplay();					//判断是否通关
+		playgame();					//进行按键操作
+	}
+}
+俄罗斯方块源码
+#include<iostream>
+#include<graphics.h>
+#include<time.h>
+#include<conio.h>
+using namespace std;
+int m,n,nindex,score=0;
+int t = 500;
+int g_blackTetrisBlock[20][10] = { 0 };
+int block[28][4][4] = {
+{
+	{1,0,0,0},
+	{1,1,1,0},
+	{0,0,0,0},
+	{0,0,0,0},
+},{
+	{1,1,0,0},
+	{1,0,0,0},
+	{1,0,0,0},
+	{0,0,0,0},
+},{
+	{1,1,1,0},
+	{0,0,1,0},
+	{0,0,0,0},
+	{0,0,0,0},
+},{
+	{0,1,0,0},
+	{0,1,0,0},
+	{1,1,0,0},
+	{0,0,0,0},
+},{
+	{0,0,1,0},
+	{1,1,1,0},
+	{0,0,0,0},
+	{0,0,0,0},
+},{
+	{1,0,0,0},
+	{1,0,0,0},
+	{1,1,0,0},
+	{0,0,0,0},
+},{
+	{1,1,1,0},
+	{1,0,0,0},
+	{0,0,0,0},
+	{0,0,0,0},
+},{
+	{1,1,0,0},
+	{0,1,0,0},
+	{0,1,0,0},
+	{0,0,0,0},
+},{
+	{1,1,0,0},
+	{0,1,1,0},
+	{0,0,0,0},
+	{0,0,0,0},
+},{
+	{0,1,0,0},
+	{1,1,0,0},
+	{1,0,0,0},
+	{0,0,0,0},
+},{
+	{1,1,0,0},
+	{0,1,1,0},
+	{0,0,0,0},
+	{0,0,0,0},
+},{
+	{0,1,0,0},
+	{1,1,0,0},
+	{1,0,0,0},
+	{0,0,0,0},
+},{
+	{0,1,1,0},
+	{1,1,0,0},
+	{0,0,0,0},
+	{0,0,0,0},
+},{
+	{1,0,0,0},
+	{1,1,0,0},
+	{0,1,0,0},
+	{0,0,0,0},
+},{
+	{0,1,1,0},
+	{1,1,0,0},
+	{0,0,0,0},
+	{0,0,0,0},
+},{
+	{1,0,0,0},
+	{1,1,0,0},
+	{0,1,0,0},
+	{0,0,0,0},
+},{
+	{0,1,0,0},
+	{1,1,1,0},
+	{0,0,0,0},
+	{0,0,0,0},
+},{
+	{1,0,0,0},
+	{1,1,0,0},
+	{1,0,0,0},
+	{0,0,0,0},
+},{
+	{1,1,1,0},
+	{0,1,0,0},
+	{0,0,0,0},
+	{0,0,0,0},
+},{
+	{0,1,0,0},
+	{1,1,0,0},
+	{0,1,0,0},
+	{0,0,0,0},
+},{
+	{1,1,1,1},
+	{0,0,0,0},
+	{0,0,0,0},
+	{0,0,0,0},
+},{
+	{1,0,0,0},
+	{1,0,0,0},
+	{1,0,0,0},
+	{1,0,0,0},
+},{
+	{1,1,1,1},
+	{0,0,0,0},
+	{0,0,0,0},
+	{0,0,0,0},
+},{
+	{1,0,0,0},
+	{1,0,0,0},
+	{1,0,0,0},
+	{1,0,0,0},
+},{
+	{1,1,0,0},
+	{1,1,0,0},
+	{0,0,0,0},
+	{0,0,0,0},
+}, {
+	{1,1,0,0},
+	{1,1,0,0},
+	{0,0,0,0},
+	{0,0,0,0},
+}, {
+	{1,1,0,0},
+	{1,1,0,0},
+	{0,0,0,0},
+	{0,0,0,0},
+}, {
+	{1,1,0,0},
+	{1,1,0,0},
+	{0,0,0,0},
+	{0,0,0,0},
+}
+	};
+void swap(int& a, int& b) {
+	int t = a;
+	a = b;
+	b = t;
+}
+void oncreate(int n) {
+	for (int i = 0; i < 4; i++) {
+		for (int j = 0; j < 4; j++) {
+			if(g_blackTetrisBlock[i][j+3]!=2)
+			g_blackTetrisBlock[i][j + 3] = block[n][i][j];
+		}
+	}
+}
+void drawrectangle() {
+	for (int i = 0; i < 20; i++) {
+		for (int j = 0; j < 10; j++)
+		{
+			if (g_blackTetrisBlock[i][j] == 0)
+			{
+				setfillcolor(WHITE);
+				solidrectangle(30 * j, 30 * i, 30 * (j + 1), 30 * (i + 1));
+			}
+			if (g_blackTetrisBlock[i][j] == 1 )
+			{
+				setfillcolor(BLUE);
+				fillrectangle(30 * j, 30 * i, 30 * (j + 1), 30 * (i + 1));
+			}
+			if (g_blackTetrisBlock[i][j] == 2) {
+				setfillcolor(RED);
+				fillrectangle(30 * j, 30 * i, 30 * (j + 1), 30 * (i + 1));
+			}
+		}
+
+	}
+}
+void judge1() {
+	for (int i = 0; i < 20; i++) {
+		int k = 1;
+		for (int j = 0; j < 10; j++)
+		{
+			if (g_blackTetrisBlock[i][j] == 0)
+			{
+				k = 0;
+			}
+		}
+		if (k) {
+			score += 2;
+			for (int j = 0; j < 10; j++)
+			{
+				g_blackTetrisBlock[i][j] = 0;
+			}
+			for (int x = i - 1; x >= 0; x--)
+			{
+				for (int y = 0; y < 10; y++)
+				{
+					swap(g_blackTetrisBlock[x][y], g_blackTetrisBlock[x + 1][y]);
+				}
+			}
+		}
+	}
+}
+void tran2() {
+	for (int i = 0; i < 20; i++) {
+		for (int j = 0; j < 10; j++) {
+			if (g_blackTetrisBlock[i][j] == 1)
+				g_blackTetrisBlock[i][j] = 2;
+		}
+	}
+	judge1();
+}
+void transform(int n) {
+	int d = 0,d1=0, a=20, b = 10;
+		for (int i = 0; i < 20; i++) {
+			for (int j = 0; j < 10; j++) {
+				if (g_blackTetrisBlock[i][j]==1)
+				{
+					if (i <=a)
+						a = i;
+					
+					if (j <= b)
+						b = j;
+					break;
+				}
+			}
+		}
+		int r=3,w=2;
+		if (n >= 20 && n < 24)
+			r = 4,w=3;
+		for (int x = r; x >= 0; x--) {
+			for (int y = r; y >=0; y--)
+			{
+				if (a + x > 19 || b + y > 10 || g_blackTetrisBlock[a + x-1][b + y-1] == 2)
+				{
+					d1 = 1;
+					break;
+				}
+			}
+			if (d1)
+				break;
+		}
+		if(!d1){
+			for (int x = w; x >= 0; x--)
+				for (int y = w; y >= 0; y--)
+					g_blackTetrisBlock[a + x][b + y] = block[n][x][y];
+		}
+}
+void judge2(){
+	for (int i = 0; i < 20; i++) {
+		for (int j = 0; j < 10; j++)
+		{
+			if (g_blackTetrisBlock[i][j] == 2 && g_blackTetrisBlock[i - 1][j] == 1) {
+				tran2();
+				m = 1;
+			}
+				
+			if (g_blackTetrisBlock[19][j] == 1)
+			{
+				tran2();
+				m = 1;
+			}
+		}
+	}
+}
+		
+void move() {
+	if (!_kbhit())
+	{	
+		judge2();
+		for (int i = 18; i >= 0; i--) {
+			for (int j = 9; j >= 0; j--) {
+				if (g_blackTetrisBlock[i][j] == 1)
+				{
+					swap(g_blackTetrisBlock[i][j], g_blackTetrisBlock[i + 1][j]);
+				}
+			}
+		}
+	}
+	else
+	{
+		int w = 1;
+		int b = _getch();
+		if (b == 112) {
+			getchar();
+		}
+		if (b == 224) {
+			int c = _getch();
+			switch (c)
+			{
+			case 75:
+				for (int i = 0; i < 20; i++) {
+					for (int j = 0; j < 10; j++) {
+						if (g_blackTetrisBlock[i][j] == 1)
+						{
+							if (g_blackTetrisBlock[i][j -1] == 2 || j == 0)
+							{
+								w = 0;
+							}
+						}
+					}
+				}
+				if (w)
+				{
+					for (int i = 0; i < 20; i++) {
+						for (int j = 1; j < 10; j++) {
+							if (g_blackTetrisBlock[i][j] == 1 && g_blackTetrisBlock[i][j - 1] == 0)
+							{
+
+								swap(g_blackTetrisBlock[i][j], g_blackTetrisBlock[i][j - 1]);
+							}
+						}
+					}
+				}
+				break;
+			case 77:
+				for (int i = 0; i < 20; i++) {
+					for (int j = 0; j < 10; j++) {
+						if (g_blackTetrisBlock[i][j] == 1)
+						{
+							if (g_blackTetrisBlock[i][j + 1] == 2 || j == 9)
+							{
+								w = 0;
+							}
+						}
+					}
+				}
+				if (w) {
+					for (int i = 0; i < 20; i++) {
+						for (int j = 8; j >= 0; j--) {
+							if (g_blackTetrisBlock[i][j] == 1 && g_blackTetrisBlock[i][j + 1] == 0)
+							{
+								swap(g_blackTetrisBlock[i][j], g_blackTetrisBlock[i][j + 1]);
+							}
+						}
+					}
+				}
+				break;
+			case 72:
+				nindex++;
+				transform(nindex);
+				if (nindex % 4 == 3)
+					nindex = 4 * n - 1;
+				break;
+			case 80:
+				t = 100;
+				break;
+			}
+		}
+	}
+}
+void predictnext(int n) {
+	outtextxy(330, 20, "下一个方块:");
+	for(int i=0;i<4;i++)
+		for (int j = 0; j < 4; j++)
+		{
+			if (block[n][i][j] == 0)
+			{
+				setfillcolor(WHITE);
+				solidrectangle(340 + 30 * j, 50 + 30 * i, 370 + 30 * j, 80 + 30 * i);
+			}
+			if (block[n][i][j] == 1) {
+				setfillcolor(BLUE);
+				fillrectangle(340 + 30 * j, 50 + 30 * i,370+ 30 * j, 80 + 30 * i);
+			}
+		}
+}
+int endplay() {
+		for (int j = 0; j < 10; j++)
+			if (g_blackTetrisBlock[0][j] == 2)
+				return 1;
+	return 0;
+}
+int main() {
+	int n1;
+	char s[20] = "";
+	initgraph(500, 600);
+	setbkcolor(WHITE);
+	cleardevice();
+	setlinecolor(BLACK);
+	srand((unsigned int)time(NULL));
+	settextcolor(GREEN);
+	settextstyle(20, 10,"宋体");
+	outtextxy(310, 220, "按↑变形");
+	outtextxy(310, 240, "按↓加速下移");
+	outtextxy(310, 260, "按←左移");
+	outtextxy(310, 280, "按→右移");
+	outtextxy(310, 300, "按 p 暂停");
+	n1 = rand() % 7;
+	while (1) {
+		sprintf_s(s, "当前得分：%d", score);
+		outtextxy(310, 200, s);
+		t = 500;
+		m = 0;
+		n = n1;
+		n1 = rand() % 7;
+		oncreate(4*n);
+		nindex = 4 * n;
+		predictnext(4 * n1);
+		if (endplay())
+			break;
+		while (true)
+		{
+			line(301, 0, 301, 600);
+			drawrectangle();
+			move();
+			Sleep(t);
+			
+			if (m)
+			{
+				break;
+			}
+		}
+		
+	}
+	settextcolor(GREEN);
+	outtextxy(330,330,"Game Over!");
+	getchar();
+	return 0;
+}

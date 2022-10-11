@@ -1,0 +1,137 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Sun Dec 26 19:51:12 2021
+# Process ID: 8048
+# Current directory: D:/桌面/CPU_test4fromcsdn
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent3704 D:\桌面\CPU_test4fromcsdn\CPU_test4fromcsdn.xpr
+# Log file: D:/桌面/CPU_test4fromcsdn/vivado.log
+# Journal file: D:/桌面/CPU_test4fromcsdn\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/桌面/CPU_test4fromcsdn/CPU_test4fromcsdn.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Vivado/Vivado/2020.1/data/ip'.
+open_project: Time (s): cpu = 00:00:29 ; elapsed = 00:00:18 . Memory (MB): peak = 1064.574 ; gain = 0.000
+update_compile_order -fileset sources_1
+eset_property source_mgmt_mode All [current_project]
+create_bd_design "design_1"
+Wrote  : <D:\桌面\CPU_test4fromcsdn\CPU_test4fromcsdn.srcs\sources_1\bd\design_1\design_1.bd> 
+create_bd_design: Time (s): cpu = 00:00:11 ; elapsed = 00:00:08 . Memory (MB): peak = 1070.281 ; gain = 0.000
+set_property source_mgmt_mode DisplayOnly [current_project]
+set_property top ADR.V [get_filesets sim_1]
+generate_target all [get_files D:/桌面/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/bd/design_1/design_1.bd]
+Wrote  : <D:\桌面\CPU_test4fromcsdn\CPU_test4fromcsdn.srcs\sources_1\bd\design_1\design_1.bd> 
+Wrote  : <D:/桌面/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+VHDL Output written to : D:/桌面/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/bd/design_1/synth/design_1.v
+VHDL Output written to : D:/桌面/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : D:/桌面/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+Exporting to file D:/桌面/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file D:/桌面/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File D:/桌面/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/bd/design_1/synth/design_1.hwdef
+generate_target: Time (s): cpu = 00:00:05 ; elapsed = 00:00:12 . Memory (MB): peak = 1172.680 ; gain = 102.398
+create_ip_run [get_files -of_objects [get_fileset sources_1] D:/桌面/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/bd/design_1/design_1.bd]
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7a35tcpg236-1
+Top: Main
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+WARNING: [Synth 8-1849] concatenation with unsized literal; will interpret as 32 bits [D:/桌面/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/DataSelector_2to1_sa.v:11]
+WARNING: [Synth 8-1849] concatenation with unsized literal; will interpret as 32 bits [D:/桌面/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/SignExtend.v:15]
+WARNING: [Synth 8-1849] concatenation with unsized literal; will interpret as 32 bits [D:/桌面/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/SignExtend.v:17]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1538.375 ; gain = 229.988
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'Main' [D:/桌面/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/Main.v:2]
+	Parameter endReg bound to: 5'b11111 
+INFO: [Synth 8-6157] synthesizing module 'PC' [D:/桌面/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/PC.v:8]
+WARNING: [Synth 8-567] referenced signal 'outside_pc' should be on the sensitivity list [D:/桌面/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/PC.v:12]
+WARNING: [Synth 8-567] referenced signal 'i_pc' should be on the sensitivity list [D:/桌面/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/PC.v:12]
+INFO: [Synth 8-6155] done synthesizing module 'PC' (1#1) [D:/桌面/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/PC.v:8]
+INFO: [Synth 8-6157] synthesizing module 'PCAddFour' [D:/桌面/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/PCAddFour.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'PCAddFour' (2#1) [D:/桌面/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/PCAddFour.v:4]
+INFO: [Synth 8-6157] synthesizing module 'InstructionMEM' [D:/桌面/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/InstructionMEM.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'InstructionMEM' (3#1) [D:/桌面/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/InstructionMEM.v:6]
+INFO: [Synth 8-6157] synthesizing module 'IR' [D:/桌面/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/IR.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'IR' (4#1) [D:/桌面/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/IR.v:6]
+INFO: [Synth 8-6157] synthesizing module 'PCJump' [D:/桌面/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/PCJump.v:6]
+WARNING: [Synth 8-567] referenced signal 'pc' should be on the sensitivity list [D:/桌面/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/PCJump.v:12]
+INFO: [Synth 8-6155] done synthesizing module 'PCJump' (5#1) [D:/桌面/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/PCJump.v:6]
+INFO: [Synth 8-6157] synthesizing module 'DataSelector_3to1' [D:/桌面/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/DataSelector_3to1.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'DataSelector_3to1' (6#1) [D:/桌面/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/DataSelector_3to1.v:7]
+INFO: [Synth 8-6157] synthesizing module 'RegFile' [D:/桌面/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/RegFile.v:10]
+WARNING: [Synth 8-567] referenced signal 'RegWre' should be on the sensitivity list [D:/桌面/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/RegFile.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'RegFile' (7#1) [D:/桌面/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/RegFile.v:10]
+INFO: [Synth 8-6157] synthesizing module 'ADR' [D:/桌面/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/ADR.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'ADR' (8#1) [D:/桌面/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/ADR.v:5]
+INFO: [Synth 8-6157] synthesizing module 'BDR' [D:/桌面/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/BDR.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'BDR' (9#1) [D:/桌面/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/BDR.v:5]
+INFO: [Synth 8-6157] synthesizing module 'SignExtend' [D:/桌面/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/SignExtend.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'SignExtend' (10#1) [D:/桌面/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/SignExtend.v:5]
+INFO: [Synth 8-6157] synthesizing module 'DataSelector_2to1_sa' [D:/桌面/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/DataSelector_2to1_sa.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'DataSelector_2to1_sa' (11#1) [D:/桌面/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/DataSelector_2to1_sa.v:6]
+INFO: [Synth 8-6157] synthesizing module 'DataSelector_2to1' [D:/桌面/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/DataSelector_2to1.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'DataSelector_2to1' (12#1) [D:/桌面/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/DataSelector_2to1.v:6]
+INFO: [Synth 8-6157] synthesizing module 'ALU' [D:/桌面/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/ALU.v:1]
+INFO: [Synth 8-226] default block is never used [D:/桌面/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/ALU.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'ALU' (13#1) [D:/桌面/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/ALU.v:1]
+INFO: [Synth 8-6157] synthesizing module 'ALUoutDR' [D:/桌面/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/ALUoutDR.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'ALUoutDR' (14#1) [D:/桌面/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/ALUoutDR.v:5]
+INFO: [Synth 8-6157] synthesizing module 'DataMEM' [D:/桌面/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/DataMEM.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'DataMEM' (15#1) [D:/桌面/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/DataMEM.v:6]
+INFO: [Synth 8-6157] synthesizing module 'DBDR' [D:/桌面/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/DBDR.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'DBDR' (16#1) [D:/桌面/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/DBDR.v:5]
+INFO: [Synth 8-6157] synthesizing module 'PCAddImm' [D:/桌面/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/PCAddImm.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'PCAddImm' (17#1) [D:/桌面/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/PCAddImm.v:5]
+INFO: [Synth 8-6157] synthesizing module 'DataSelector_4to1' [D:/桌面/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/DataSelector_4to1.v:8]
+INFO: [Synth 8-226] default block is never used [D:/桌面/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/DataSelector_4to1.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'DataSelector_4to1' (18#1) [D:/桌面/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/DataSelector_4to1.v:8]
+INFO: [Synth 8-6157] synthesizing module 'ControlUnit' [D:/桌面/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/ControlUnit.v:7]
+INFO: [Synth 8-6157] synthesizing module 'DFlipFlop' [D:/桌面/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/DFileFlop.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'DFlipFlop' (19#1) [D:/桌面/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/DFileFlop.v:6]
+INFO: [Synth 8-6157] synthesizing module 'NextState' [D:/桌面/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/NextState.v:5]
+	Parameter IF bound to: 3'b000 
+	Parameter ID bound to: 3'b001 
+	Parameter aEXE bound to: 3'b110 
+	Parameter bEXE bound to: 3'b101 
+	Parameter cEXE bound to: 3'b010 
+	Parameter MEM bound to: 3'b011 
+	Parameter aWB bound to: 3'b111 
+	Parameter cWB bound to: 3'b100 
+INFO: [Synth 8-226] default block is never used [D:/桌面/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/NextState.v:18]
+INFO: [Synth 8-6155] done synthesizing module 'NextState' (20#1) [D:/桌面/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/NextState.v:5]
+INFO: [Synth 8-6157] synthesizing module 'OutputFunc' [D:/桌面/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/OutputFunc.v:17]
+	Parameter IF bound to: 3'b000 
+	Parameter ID bound to: 3'b001 
+	Parameter aEXE bound to: 3'b110 
+	Parameter bEXE bound to: 3'b101 
+	Parameter cEXE bound to: 3'b010 
+	Parameter MEM bound to: 3'b011 
+	Parameter aWB bound to: 3'b111 
+	Parameter cWB bound to: 3'b100 
+	Parameter addi bound to: 6'b000010 
+	Parameter ori bound to: 6'b010010 
+	Parameter sll bound to: 6'b011000 
+	Parameter add bound to: 6'b000000 
+	Parameter sub bound to: 6'b000001 
+	Parameter slt bound to: 6'b100110 
+	Parameter slti bound to: 6'b100111 
+	Parameter sw bound to: 6'b110000 
+	Parameter lw bound to: 6'b110001 
+	Parameter beq bound to: 6'b110100 
+	Parameter j bound to: 6'b111000 
+	Parameter jr bound to: 6'b111001 
+	Parameter Or bound to: 6'b010000 
+	Parameter And bound to: 6'b010001 
+	Parameter jal bound to: 6'b111010 
+	Parameter halt bound to: 6'b111111 
+WARNING: [Synth 8-567] referenced signal 'opcode' should be on the sensitivity list [D:/桌面/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/OutputFunc.v:49]
+WARNING: [Synth 8-567] referenced signal 'zero' should be on the sensitivity list [D:/桌面/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/OutputFunc.v:49]
+INFO: [Synth 8-6155] done synthesizing module 'OutputFunc' (21#1) [D:/桌面/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/OutputFunc.v:17]
+INFO: [Synth 8-6155] done synthesizing module 'ControlUnit' (22#1) [D:/桌面/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/ControlUnit.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'Main' (23#1) [D:/桌面/CPU_test4fromcsdn/CPU_test4fromcsdn.srcs/sources_1/new/Main.v:2]
